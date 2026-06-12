@@ -32,6 +32,26 @@
             if (MOS.hasGSAP()) window.gsap.to(el, { x: 0, y: 0, duration: .8, ease: "power2.out" });
             else el.style.transform = "none";
           });
+          /* reset perspective tilt */
+          if (MOS.hasGSAP()) window.gsap.to(root, { rotateX: 0, rotateY: 0, duration: 1, ease: "power3.out" });
+        });
+
+        /* perspective tilt on the hero window itself (subtle 3-D card feel) */
+        root.style.transformStyle = "preserve-3d";
+        root.style.perspective = "1200px";
+        root.addEventListener("mousemove", function (e) {
+          if (!MOS.state.isAIActive) return;
+          var r = root.getBoundingClientRect();
+          var dx = (e.clientX - (r.left + r.width / 2)) / (r.width / 2);
+          var dy = (e.clientY - (r.top + r.height / 2)) / (r.height / 2);
+          if (MOS.hasGSAP()) {
+            window.gsap.to(root, {
+              rotateY: dx * 4,
+              rotateX: -dy * 3,
+              duration: .8,
+              ease: "power2.out"
+            });
+          }
         });
       }
     }

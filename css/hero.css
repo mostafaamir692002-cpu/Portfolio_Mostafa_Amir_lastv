@@ -121,6 +121,77 @@
 }
 @keyframes sheen{0%{background-position:160% 0}45%,100%{background-position:-60% 0}}
 .hero-sub{max-width:430px;font-size:15px;color:var(--ink-2);opacity:0}
+
+/* hero manifesto — the positioning line, fades in after hero-sub */
+.hero-manifesto {
+  max-width: 380px;
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--ink-1);
+  opacity: 0;
+  line-height: 1.6;
+  padding: 12px 18px;
+  border-radius: 12px;
+  background: rgba(90,169,255,.07);
+  border: 1px solid rgba(90,169,255,.14);
+  letter-spacing: .01em;
+}
+.hero-manifesto em {
+  font-style: normal;
+  color: var(--blue-soft);
+  font-weight: 600;
+}
+
+/* hero CTA row */
+.hero-cta-row {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+  opacity: 0;
+}
+.hero-btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 13px 22px;
+  border-radius: 14px;
+  font-family: "Archivo";
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: .01em;
+  color: #fff;
+  text-decoration: none;
+  background: linear-gradient(180deg, #1c8cff, #0860c8);
+  border: 1px solid rgba(255,255,255,.2);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.4), 0 10px 26px rgba(10,111,224,.45);
+  transition: transform .18s var(--spring), box-shadow .2s;
+}
+.hero-btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.4), 0 14px 32px rgba(10,111,224,.55);
+}
+.hero-btn-primary:active { transform: scale(.97); }
+.hero-btn-ghost {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 13px 22px;
+  border-radius: 14px;
+  font-family: "Archivo";
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--ink-1);
+  text-decoration: none;
+  background: rgba(255,255,255,.05);
+  border: 1px solid rgba(255,255,255,.1);
+  transition: transform .18s var(--spring), color .2s, background .2s;
+}
+.hero-btn-ghost:hover {
+  transform: translateY(-2px);
+  color: var(--ink-0);
+  background: rgba(255,255,255,.09);
+}
 .hero-sub b{color:var(--ink-0);font-weight:600}
 
 /* iOS text-selection menu over the name */

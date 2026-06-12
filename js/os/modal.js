@@ -195,6 +195,14 @@
         if (e.target === modalBackdrop) close();
       });
     }
+    /* MOSTAFA.OS label opens system diagnostics */
+    var osBrandLabel = MOS.$("#osBrandLabel");
+    if (osBrandLabel) {
+      osBrandLabel.addEventListener("click", function () {
+        MOS.modal.openDiagnostics();
+      });
+    }
+
     /* Escape closes the window — basic OS manners */
     document.addEventListener("keydown", function (e) {
       if (e.key === "Escape") close();

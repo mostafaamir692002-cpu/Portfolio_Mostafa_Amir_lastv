@@ -83,8 +83,8 @@
         ar: "تم إطلاق واجهة متجر راقية وسريعة بلغتين. الكتالوج متهندس للوصول السريع للمنتجات، والنتيجة رحلة رقمية مريحة بتليق بجودة المنتج نفسه."
       },
       stats: [
-        { lbl: "CATALOG SIZE", val: "38 SKUs", desc: "Structured & QA'd end-to-end" },
-        { lbl: "LOCALIZATION", val: "100% AR/EN", desc: "Catalogs, pages & metadata synced" }
+        { lbl: "CATALOG SIZE", val: "38 SKUs", desc: "Structured, translated & QA'd end-to-end" },
+        { lbl: "LOCALIZATION", val: "100% AR/EN", desc: "Catalogs, pages & metadata fully synced" }
       ],
       link: "https://royal-sea-eg.com"
     },
@@ -163,7 +163,7 @@
       },
       stats: [
         { lbl: "SEO COVERAGE", val: "100%", desc: "Bilingual search-optimized metadata" },
-        { lbl: "CATALOG DEPLOYED", val: "Fully local", desc: "Refined copy and pricing structures" }
+        { lbl: "BRAND VOICE", val: "Rebuilt", desc: "Gulf-grade Arabic copy, product-by-product" }
       ],
       link: "https://medieval-aloud.com"
     },
@@ -241,8 +241,8 @@
         ar: "سلّمنا منصة مأكولات بحرية عالية التحويل شالت العشوائية من التجارة الطازة. العمليات بقت أسرع والعميل بقا يستمتع برحلة سهلة وموثوقة من البحر لطاولة الطعام."
       },
       stats: [
-        { lbl: "DELIVERY LATENCY", val: "Minimized", desc: "Dynamic scheduling in place" },
-        { lbl: "ORDER LOOP", val: "100% Digital", desc: "Automated routing replaces manual calls" }
+        { lbl: "INVENTORY SYNC", val: "Real-time", desc: "Live stock visibility eliminates mid-day failures" },
+        { lbl: "ORDER FLOW", val: "100% Digital", desc: "WhatsApp calls fully replaced by automated loop" }
       ],
       link: "https://seafood-mood.com"
     },
@@ -254,7 +254,7 @@
       title: "UNITED",
       website: "https://united-ffv.com",
       status: { en: "Live", ar: "مشروع حي" },
-      previewImage: "https://images.unsplash.com/photo-1610348725531-843dff563e2c?w=1200&q=80",
+      previewImage: "assets/united_preview.jpg",
       problem_short: {
         en: "A B2B produce supplier running wholesale on WhatsApp and phone calls — invoice errors, expired stock, zero visibility.",
         ar: "مورد جملة بيدير طلباته على الواتساب والتليفون — أخطاء فواتير، منتجات تالفة، وصفر رؤية."
@@ -320,10 +320,168 @@
         ar: "حولنا كامل سلسلة التوريد للرقمية. قللنا أخطاء الطلبات لـ صفر تقريباً، وسرّعنا تسليم الفواتير، وحسّنا استخدام مساحات المخازن بربط المخزون بالطلب الفعلي."
       },
       stats: [
-        { lbl: "INVOICING SPEED", val: "Instant", desc: "Automated PDFs bypass manual entry" },
-        { lbl: "ORDER ERRORS", val: "~0%", desc: "Precise contract validation on entry" }
+        { lbl: "INVOICING SPEED", val: "Instant", desc: "Auto-PDF on order confirm — zero manual entry" },
+        { lbl: "ORDER ACCURACY", val: "~100%", desc: "Contract-price validation eliminates entry errors" }
       ],
       link: "https://united-ffv.com"
+    },
+    {
+      id: "PANTOUFLA",
+      glyph: "P",
+      glyphClass: "wc-5",
+      tag: { en: "Family Lifestyle Brand", ar: "براند لايف ستايل عائلي" },
+      title: "Pantoufla",
+      website: "https://pantoufla.com",
+      status: { en: "Live", ar: "مشروع حي" },
+      previewImage: "assets/pantoufla_preview.jpg",
+      problem_short: {
+        en: "A Cairo family brand launching from zero — no digital identity, no storefront, no strategy.",
+        ar: "براند عائلي قاهري بيبدأ من الصفر — بدون هوية رقمية، بدون متجر، بدون استراتيجية."
+      },
+      outcome_short: {
+        en: "Full brand identity, Shopify store, and bilingual product catalog built end-to-end in 6 weeks.",
+        ar: "هوية براند كاملة، متجر شوبيفاي، وكتالوج بلغتين من الأول للآخر في ٦ أسابيع."
+      },
+      card: {
+        en: "Ground-up brand and commerce build for a Cairo-based family lifestyle label — identity, catalog, and go-to-market strategy delivered as one system.",
+        ar: "بناء براند ومتجر من الصفر لبراند لايف ستايل عائلي قاهري — هوية، كتالوج، واستراتيجية إطلاق في نظام واحد."
+      },
+      meta: {
+        en: ["Brand Identity", "Commerce Launch", "Go-to-Market"],
+        ar: ["هوية العلامة", "إطلاق المتجر", "الدخول للسوق"]
+      },
+      focusTags: {
+        en: ["Brand Build", "Visual Identity", "Commerce System", "Launch Strategy", "Bilingual UX"],
+        ar: ["بناء البراند", "الهوية البصرية", "نظام التجارة", "استراتيجية الإطلاق", "تجربة ثنائية اللغة"]
+      },
+      techs: {
+        en: ["Brand Strategy", "Shopify Build", "Visual Identity", "Product Photography Direction"],
+        ar: ["استراتيجية البراند", "بناء شوبيفاي", "الهوية البصرية", "توجيه تصوير المنتج"]
+      },
+      focus: {
+        en: ["Brand Creation", "Commerce Architecture", "Identity Design", "Launch Strategy", "Customer Journey"],
+        ar: ["خلق البراند", "بنية التجارة", "تصميم الهوية", "استراتيجية الإطلاق", "رحلة العميل"]
+      },
+      overview: {
+        en: "Pantoufla is a Cairo-based family lifestyle brand serving the modern Egyptian household. We built the brand from scratch — from naming strategy and visual identity to a fully operational Shopify commerce system.",
+        ar: "بانتوفلا هي براند لايف ستايل عائلي قاهري بيخدم البيت المصري العصري. بنينا البراند من الصفر — من استراتيجية التسمية والهوية البصرية لنظام تجارة شوبيفاي شغّال بالكامل."
+      },
+      businessContext: {
+        en: "The Cairo family market is underserved by brands that actually understand local lifestyle. Pantoufla needed to feel familiar and warm while projecting the quality and consistency of a modern brand.",
+        ar: "سوق الأسر القاهرية فيه نقص في البراندات اللي بتفهم الحياة المحلية فعلاً. بانتوفلا كان لازم تحس بالدفا والألفة مع عرض جودة واتساق البرانداتالعصرية."
+      },
+      problem: {
+        en: "The founders had a clear product vision but no brand framework, no digital storefront, and no strategy for entering a crowded market. They needed a full launch system, not just a website.",
+        ar: "المؤسسون كان عندهم رؤية منتج واضحة لكن بدون إطار براند، بدون متجر رقمي، وبدون استراتيجية لدخول سوق مزدحم. كانوا محتاجين نظام إطلاق كامل، مش مجرد موقع."
+      },
+      solution: {
+        en: "Designed the visual identity from ground up — logo system, color palette, typography, and packaging language. Built a fully bilingual Shopify store with catalog architecture optimized for a Cairo family audience.",
+        ar: "صممنا الهوية البصرية من الأساس — نظام الشعار، لوحة الألوان، الخطوط، ولغة التعبئة والتغليف. بنينا متجر شوبيفاي ثنائي اللغة بالكامل مع بنية كتالوج متهندسة لجمهور الأسر القاهرية."
+      },
+      decisions: {
+        en: [
+          "Arabic-First Naming: Designed the brand language to work in Egyptian Arabic first, English second — not the other way around.",
+          "Warm Visual Language: Chose a soft, earthy color palette that communicates comfort without looking generic.",
+          "Catalog by Occasion: Structured the product catalog around family occasions (morning routine, school prep, weekend mood) not product types."
+        ],
+        ar: [
+          "التسمية بالعربي أولاً: صممنا لغة البراند لتشتغل بالعربي المصري أولاً، الإنجليزي ثانياً — مش العكس.",
+          "لغة بصرية دافية: اخترنا لوحة ألوان ناعمة وترابية بتوصل إحساس الراحة من غير ما تبان عادية.",
+          "الكتالوج حسب المناسبة: رتبنا الكتالوج حول مناسبات عائلية (روتين الصباح، تجهيز المدرسة، مود الويكند) مش حسب نوع المنتج."
+        ]
+      },
+      systemArchitecture: {
+        en: "Built on Shopify with custom theme modifications, bilingual product content, and a streamlined checkout flow optimized for Egyptian mobile users.",
+        ar: "بُني على شوبيفاي بتعديلات ثيم مخصصة، ومحتوى منتجات ثنائي اللغة، ومسار دفع مبسط محسّن لمستخدمي الموبايل المصريين."
+      },
+      outcome: {
+        en: "Launched a fully operational brand and commerce system in 6 weeks. Pantoufla entered the market with a clear identity, a working store, and a go-to-market plan ready to execute.",
+        ar: "أطلقنا نظام براند وتجارة شغّال بالكامل في ٦ أسابيع. بانتوفلا دخلت السوق بهوية واضحة، متجر شغّال، وخطة إطلاق جاهزة للتنفيذ."
+      },
+      stats: [
+        { lbl: "TIME TO LAUNCH", val: "6 Weeks", desc: "Zero-to-live: brand + store + strategy" },
+        { lbl: "CATALOG BUILD", val: "Bilingual", desc: "AR/EN product content, SEO-structured" }
+      ],
+      link: "https://pantoufla.com"
+    },
+    {
+      id: "THE FISHMONGER",
+      glyph: "F",
+      glyphClass: "wc-6",
+      tag: { en: "Artisanal Seafood Brand", ar: "براند مأكولات بحرية حِرَفي" },
+      title: "The Fishmonger",
+      website: "https://thefishmonger.co",
+      status: { en: "Live", ar: "مشروع حي" },
+      previewImage: "assets/fishmonger_preview.jpg",
+      problem_short: {
+        en: "A premium fish market with loyal walk-in customers — but zero digital commerce and 100% reliance on WhatsApp orders.",
+        ar: "سوق سمك فاخر بعملاء مخلصين — لكن صفر تجارة رقمية و١٠٠% اعتماد على طلبات الواتساب."
+      },
+      outcome_short: {
+        en: "Brand repositioning, Shopify commerce platform, and a premium visual identity that justified higher price points.",
+        ar: "إعادة تموضع البراند، منصة تجارة شوبيفاي، وهوية بصرية راقية مبررة للأسعار الأعلى."
+      },
+      card: {
+        en: "Traditional fish market reborn as a premium DTC seafood brand — identity, commerce platform, and brand voice built from the ground up.",
+        ar: "سوق سمك تقليدي اتولد من جديد كبراند مأكولات بحرية DTC فاخر — هوية، منصة تجارة، وصوت براند اتبنوا من الأساس."
+      },
+      meta: {
+        en: ["Brand Repositioning", "DTC Commerce", "Identity Design"],
+        ar: ["إعادة تموضع البراند", "التجارة المباشرة DTC", "تصميم الهوية"]
+      },
+      focusTags: {
+        en: ["Brand Repositioning", "Commerce Platform", "Visual Identity", "Premium Positioning", "DTC Strategy"],
+        ar: ["إعادة تموضع البراند", "منصة التجارة", "الهوية البصرية", "التموضع الفاخر", "استراتيجية DTC"]
+      },
+      techs: {
+        en: ["Brand Strategy", "Shopify Platform", "Visual Identity", "Positioning & Copy"],
+        ar: ["استراتيجية البراند", "منصة شوبيفاي", "الهوية البصرية", "التموضع والنصوص"]
+      },
+      focus: {
+        en: ["Brand Transformation", "Commerce Architecture", "Positioning Strategy", "Visual Identity", "Customer Experience"],
+        ar: ["تحول البراند", "بنية التجارة", "استراتيجية التموضع", "الهوية البصرية", "تجربة العميل"]
+      },
+      overview: {
+        en: "The Fishmonger is a premium direct-to-consumer seafood brand repositioned from a traditional fish market model. We built the brand identity, the commerce infrastructure, and the premium positioning that allowed them to charge what their quality deserves.",
+        ar: "ذا فيش مونجر هو براند مأكولات بحرية مباشر للمستهلك (DTC) أُعيد تموضعه من نموذج سوق السمك التقليدي. بنينا هوية البراند، البنية التجارية، والتموضع الفاخر اللي خلّاهم يتقاضوا ثمن جودتهم الحقيقية."
+      },
+      businessContext: {
+        en: "The premium seafood market is growing but mostly served by generic delivery apps. An artisanal brand with strong product quality needed a digital identity that matched — and pricing power to go with it.",
+        ar: "سوق المأكولات البحرية الفاخرة بينمو لكن بيخدمه معظمه تطبيقات توصيل جنيريك. براند حِرَفي بجودة منتج عالية كان محتاج هوية رقمية على نفس المستوى — وقدرة تسعير تتماشى معاها."
+      },
+      problem: {
+        en: "All orders came through WhatsApp. There was no brand identity, no pricing structure, and no way to communicate quality at a premium level. The business was invisible online.",
+        ar: "كل الطلبات جت عبر الواتساب. مكنش فيه هوية براند، ولا هيكل تسعير، ولا طريقة لإيصال الجودة على مستوى فاخر. البيزنس كان غير مرئي أونلاين."
+      },
+      solution: {
+        en: "Built a complete brand identity around the artisanal, direct-from-sea story. Launched a Shopify DTC platform with premium product photography direction, evocative copy, and a seamless mobile ordering experience.",
+        ar: "بنينا هوية براند كاملة حول قصة الحِرَفية والمباشرة من البحر. أطلقنا منصة DTC شوبيفاي مع توجيه تصوير منتج راقٍ، نصوص معبرة، وتجربة طلب موبايل سلسة."
+      },
+      decisions: {
+        en: [
+          "Story Before Product: Led every page with the catch story, not the price — building desire before presenting the transaction.",
+          "Premium Pricing Architecture: Restructured SKU pricing to reflect the artisanal value, backed by the brand story we built.",
+          "Mobile-First Design: 80% of orders come from mobile — designed the entire checkout experience around one-thumb navigation."
+        ],
+        ar: [
+          "القصة قبل المنتج: بدأنا كل صفحة بقصة الصيد، مش السعر — بنينا الرغبة قبل ما نعرض الصفقة.",
+          "هيكل تسعير فاخر: أعدنا هيكلة أسعار المنتجات لتعكس القيمة الحِرَفية، مدعومة بقصة البراند اللي بنيناها.",
+          "تصميم موبايل أولاً: ٨٠% من الطلبات من الموبايل — صممنا تجربة الدفع كاملة حول التنقل بإصبع واحد."
+        ]
+      },
+      systemArchitecture: {
+        en: "Shopify commerce platform with custom collection architecture, photography-forward theme, and integrated local payment and delivery options.",
+        ar: "منصة تجارة شوبيفاي مع بنية مجموعات مخصصة، ثيم يحتفي بالتصوير، وبوابات دفع وتوصيل محلية متكاملة."
+      },
+      outcome: {
+        en: "Transformed a WhatsApp-dependent fish market into a premium DTC brand with a digital storefront worthy of the product quality. Revenue per order increased after repositioning.",
+        ar: "حولنا سوق سمك معتمد على الواتساب لبراند DTC فاخر بواجهة رقمية على مستوى جودة المنتج. الإيراد لكل طلب زاد بعد إعادة التموضع."
+      },
+      stats: [
+        { lbl: "BRAND STATUS", val: "Repositioned", desc: "WhatsApp orders → premium DTC commerce" },
+        { lbl: "ORDER CHANNEL", val: "100% Digital", desc: "Mobile-first checkout, zero phone dependency" }
+      ],
+      link: "https://thefishmonger.co"
     }
   ];
 

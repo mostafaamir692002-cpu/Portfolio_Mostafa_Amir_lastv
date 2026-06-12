@@ -26,7 +26,7 @@
 
     function revealFallback() {
       MOS.$$(".word-i").forEach(function (w) { w.style.transform = "none"; });
-      MOS.$$(".hero-eyebrow,.hero-sub").forEach(function (e) { e.style.opacity = "1"; });
+      MOS.$$(".hero-eyebrow,.hero-sub,.hero-manifesto,.hero-cta-row").forEach(function (e) { e.style.opacity = "1"; });
       if (dock) { dock.style.opacity = "1"; dock.style.transform = "none"; }
       MOS.fillBars(document);
     }
@@ -40,6 +40,8 @@
         .from(".monogram-disc", { scale: .6, opacity: 0, duration: .9, ease: "back.out(1.6)" }, 0.15)
         .to(".hero-title .word-i", { y: "0%", duration: 1, ease: "power4.out", stagger: .12 }, 0.3)
         .to(".hero-sub", { opacity: 1, duration: .7 }, 0.7)
+        .to(".hero-manifesto", { opacity: 1, duration: .6 }, 0.9)
+        .fromTo(".hero-cta-row", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: .5 }, 1.05)
         .call(function () {
           MOS.$$(".hero-title .word-i").forEach(function (w, i) {
             var txt = w.textContent;

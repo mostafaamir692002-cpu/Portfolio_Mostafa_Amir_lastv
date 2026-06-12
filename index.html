@@ -3,13 +3,16 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-<title>Mostafa Amir — Product Builder</title>
-<meta name="description" content="Mostafa Amir — Product Builder. Connecting Product Thinking, Business Understanding, Systems Design, and Technology to turn ideas into real products, brands, and operational systems." />
-<meta property="og:title" content="Mostafa Amir — Product Builder" />
-<meta property="og:description" content="Connecting product strategy, business logic, systems design, and execution to launch real products and commerce systems." />
+<title>Mostafa Amir — Brand &amp; Commerce Systems Builder · Cairo</title>
+<meta name="description" content="Mostafa Amir — I build the system behind the brand. Product strategy, brand identity, commerce infrastructure, and go-to-market — delivered as one system that actually ships. Based in Cairo, working worldwide." />
+<meta property="og:title" content="Mostafa Amir — Brand &amp; Commerce Systems Builder" />
+<meta property="og:description" content="Most agencies hand you a website. I hand you a system. Brand identity, commerce infrastructure, and go-to-market — built as one." />
 <meta property="og:type" content="website" />
 <meta property="og:image" content="assets/mostafa-amir.jpg" />
 <meta property="og:url" content="https://mostafaamir.com" />
+<meta name="theme-color" content="#060608" media="(prefers-color-scheme: dark)" />
+<meta name="theme-color" content="#f2f4f8" media="(prefers-color-scheme: light)" />
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
 
 <!-- perf: early connections for fonts + CDN libs -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -46,7 +49,7 @@
 <!-- BOOT — space forms behind this overlay -->
 <div id="boot">
   <div class="boot-mark"><img src="assets/mostafa-amir.jpg" alt="Mostafa Amir" width="88" height="88" style="width:100%;height:100%;object-fit:cover;border-radius:22px;" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"><span class="chrome-text" style="display:none">MA</span></div>
-  <div class="boot-label">Initializing System</div>
+  <div class="boot-label">Forming the system...</div>
   <div class="boot-bar"><i></i></div>
   <div class="boot-pct">0%</div>
 </div>
@@ -63,7 +66,7 @@
       <span class="active" data-lang="en" role="radio" aria-checked="true" tabindex="0" aria-label="Switch to English">EN</span>
       <span data-lang="ar" role="radio" aria-checked="false" tabindex="0" aria-label="Switch to Arabic">AR</span>
     </div>
-    <span style="font-family:'JetBrains Mono';font-size:11px;letter-spacing:.1em;color:var(--ink-2)">MOSTAFA.OS</span>
+    <button id="osBrandLabel" style="background:none;border:none;cursor:pointer;font-family:'JetBrains Mono';font-size:11px;letter-spacing:.1em;color:var(--ink-2);padding:0" title="Open system diagnostics">MOSTAFA.OS</button>
     <div class="sig"><i></i><i></i><i></i><i></i></div>
     <svg width="16" height="12" viewBox="0 0 16 12" fill="none"><path d="M8 11.2 1 4.4a9.6 9.6 0 0 1 14 0L8 11.2Z" stroke="currentColor" stroke-width="1.3" opacity=".9"/><path d="M8 11 4.2 7.2a5.3 5.3 0 0 1 7.6 0L8 11Z" fill="currentColor"/></svg>
     <div class="batt"><i></i></div>
@@ -86,17 +89,13 @@
     <a href="#modes"><span class="lang-en">Disciplines</span><span class="lang-ar">التخصصات</span></a>
   </div>
   <div style="display:flex;align-items:center;gap:12px;">
-    <button class="theme-toggle" aria-label="Toggle light and dark mode">
-      <svg class="sun-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
-      <svg class="moon-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
-    </button>
     <div class="lang-switcher" role="group" aria-label="Language Selection">
       <span class="active" data-lang="en" role="radio" aria-checked="true" tabindex="0" aria-label="Switch to English">EN</span>
       <span data-lang="ar" role="radio" aria-checked="false" tabindex="0" aria-label="Switch to Arabic">AR</span>
     </div>
     <a href="#contact" class="dock-cta" style="display: inline-flex; align-items: center; gap: 6px;">
-      <span class="lang-en">Let's build</span>
-      <span class="lang-ar">يلا نبني</span>
+      <span class="lang-en">Start a Project</span>
+      <span class="lang-ar">ابدأ مشروعك</span>
       <svg class="btn-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
     </a>
   </div>
@@ -112,7 +111,7 @@
     <div class="hero-window" data-reveal data-parallax-root>
       <div class="win-chrome">
         <div class="win-dots"><i></i><i></i><i></i></div>
-        <div class="win-pill">product.builder · live</div>
+        <div class="win-pill" id="winPill">product.builder · live</div>
         <div class="win-tools"><span></span><span></span><span></span></div>
       </div>
 
@@ -132,10 +131,10 @@
             </div>
             <div class="profile-meta">
               <div class="row"><svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M12 21s-7-5.5-7-11a7 7 0 0 1 14 0c0 5.5-7 11-7 11Z" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="10" r="2.4" stroke="currentColor" stroke-width="1.6"/></svg> <span class="lang-en">Cairo, Egypt · GMT+2</span><span class="lang-ar">القاهرة، مصر · GMT+2</span></div>
-              <div class="row"><svg width="15" height="15" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"/><path d="M12 7v5l3 2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg> <span class="lang-en">Available for select work</span><span class="lang-ar">متاح لشغل مختار</span></div>
+              <div class="row"><svg width="15" height="15" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"/><path d="M12 7v5l3 2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg> <span class="lang-en">Available · 2–3 projects · Q3 2026</span><span class="lang-ar">متاح · 2–3 مشاريع · الربع الثالث 2026</span></div>
             </div>
             <div class="socials">
-              <a class="metal" href="mailto:mostafaamir692002@gmail.com" aria-label="Email" title="Email" target="_blank" rel="noopener">
+              <a class="metal" href="mailto:hello@mostafaamir.com" aria-label="Email" title="Email" target="_blank" rel="noopener">
                 <svg width="17" height="17" viewBox="0 0 24 24" fill="none"><rect x="3" y="5" width="18" height="14" rx="2.5" stroke="currentColor" stroke-width="1.6"/><path d="m4 7 8 6 8-6" stroke="currentColor" stroke-width="1.6"/></svg>
               </a>
               <a class="metal" href="https://www.linkedin.com/in/mostafa-amir-767772346/" aria-label="LinkedIn" title="LinkedIn" target="_blank" rel="noopener noreferrer">
@@ -156,18 +155,18 @@
               <span class="lang-ar">لوحة التحكم</span>
             </div>
             <div class="cc-grid">
-              <button class="toggle on" data-c="ai" aria-pressed="true" aria-label="Toggle AI Specular Parallax Interaction">
+              <button class="toggle on" data-c="ai" aria-pressed="true" aria-label="Toggle depth parallax and specular">
                 <span class="ico"><svg width="17" height="17" viewBox="0 0 24 24" fill="none"><path d="M12 3v3m0 12v3m9-9h-3M6 12H3m13.5-6.5-2 2m-7 7-2 2m13 0-2-2m-7-7-2-2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="1.6"/></svg></span>
                 <span>
-                  <span class="lbl"><span class="lang-en">Brand Systems</span><span class="lang-ar">أنظمة العلامة</span></span><br>
+                  <span class="lbl"><span class="lang-en">Depth Mode</span><span class="lang-ar">وضع العمق</span></span><br>
                   <span class="st"><span class="lang-en">Active</span><span class="lang-ar">شغّال</span></span>
                 </span>
               </button>
-              <button class="toggle on" data-c="design" aria-pressed="true" aria-label="Toggle Wireframe Design Mode">
+              <button class="toggle on" data-c="design" aria-pressed="true" aria-label="Toggle Blueprint wireframe render mode">
                 <span class="ico"><svg width="17" height="17" viewBox="0 0 24 24" fill="none"><path d="M6 2h12l4 10-10 10L2 12Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><circle cx="12" cy="12" r="2.5" stroke="currentColor" stroke-width="1.5"/></svg></span>
                 <span>
                   <span class="lbl"><span class="lang-en">Blueprint</span><span class="lang-ar">المخطط</span></span><br>
-                  <span class="st"><span class="lang-en">Active</span><span class="lang-ar">شغّال</span></span>
+                  <span class="st"><span class="lang-en">Render On</span><span class="lang-ar">شغّال</span></span>
                 </span>
               </button>
             </div>
@@ -177,7 +176,7 @@
         <!-- CENTER CORE -->
         <div class="hero-core" data-px="0.15">
           <div class="hero-eyebrow">
-            <span class="lang-en">// Product Builder · Brand & Commerce Systems</span>
+            <span class="lang-en">// Product Builder · Brand &amp; Commerce Systems</span>
             <span class="lang-ar">// صانع منتجات · أنظمة البراند والتجارة</span>
           </div>
           <div class="monogram-disc" data-px="0.7"><span class="chrome-text">MA</span><img src="assets/mostafa-amir.jpg" alt="Mostafa Amir" width="124" height="124" decoding="async" onerror="this.remove()"></div>
@@ -194,6 +193,16 @@
             <span class="lang-en">I turn business problems into real products. Brand identity, commerce infrastructure, and go-to-market — built as one system that actually ships.</span>
             <span class="lang-ar" style="font-family:'Noto Sans Arabic'; font-size:15.5px; direction:rtl; text-align:center; line-height:1.75; display:block;">بحول مشاكل البيزنس لمنتجات حقيقية. هوية البراند، منصة التجارة، وخطة الإطلاق — كلها نظام واحد بيتنفذ فعلاً.</span>
           </p>
+          <div class="hero-manifesto">
+            <span class="lang-en">Most agencies hand you a website. I hand you a <em>system</em>.</span>
+            <span class="lang-ar" style="font-family:'Noto Sans Arabic';direction:rtl;display:block;">معظم الوكالات بتسلمك موقع. أنا بسلمك <em>نظام</em>.</span>
+          </div>
+          <div class="hero-cta-row">
+            <a href="#work" class="hero-btn-primary lang-en">See the Work <svg class="btn-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+            <a href="#work" class="hero-btn-primary lang-ar" style="font-family:'Noto Sans Arabic'">شوف الشغل <svg class="btn-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+            <a href="#contact" class="hero-btn-ghost lang-en">Start a Project →</a>
+            <a href="#contact" class="hero-btn-ghost lang-ar" style="font-family:'Noto Sans Arabic'">← ابدأ مشروعك</a>
+          </div>
         </div>
 
         <!-- RIGHT RAIL -->
@@ -236,63 +245,42 @@
 
       <!-- decorative control strips -->
       <div class="hero-strips" data-px="0.25">
-        <div class="vstrip metal"><span><svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M12 18V6m0 0-4 4m4-4 4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span><i style="height:72%"></i><span class="lab">Strategy</span></div>
-        <div class="vstrip metal"><span><svg width="15" height="15" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.6"/><path d="M12 3v2m0 14v2m9-9h-2M5 12H3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span><i style="height:88%"></i><span class="lab">Product</span></div>
-        <div class="vstrip metal"><span><svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M5 8h14M5 16h9" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span><i style="height:55%"></i><span class="lab">Systems</span></div>
+        <a href="#systems" class="vstrip metal" title="View Approach"><span><svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M12 18V6m0 0-4 4m4-4 4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span><i style="height:72%"></i><span class="lab">Strategy</span></a>
+        <a href="#work" class="vstrip metal" title="View Work"><span><svg width="15" height="15" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.6"/><path d="M12 3v2m0 14v2m9-9h-2M5 12H3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span><i style="height:88%"></i><span class="lab">Product</span></a>
+        <a href="#modes" class="vstrip metal" title="View Disciplines"><span><svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M5 8h14M5 16h9" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span><i style="height:55%"></i><span class="lab">Systems</span></a>
       </div>
     </div>
 
     <!-- scroll cue -->
     <div class="scroll-cue" aria-hidden="true">
-      <span class="lang-en">Scroll to explore</span>
+      <span class="lang-en">scroll.init()</span>
       <span class="lang-ar">انزل تحت وشوف</span>
       <i></i>
     </div>
   </section>
 
-  <!-- ===== DISCIPLINES / MODE SELECTOR ===== -->
-  <section class="modes" id="modes">
-    <div class="sec-head" data-reveal>
-      <span class="kicker">
-        <span class="lang-en">Operating Modes</span>
-        <span class="lang-ar">أوضاع التشغيل</span>
-      </span>
-      <h2>
-        <span class="lang-en">Five pillars,<br>one system.</span>
-        <span class="lang-ar">خمسة محاور،<br>كلهم نظام واحد.</span>
-      </h2>
-      <p class="lang-en">Brand, commerce, and operations are not separate engagements — they're layers of the same system. Switch a mode to see how they connect.</p>
-      <p class="lang-ar" style="font-family:'Noto Sans Arabic'; direction:rtl; text-align:right;">البراند والتجارة والعمليات مش شغلانات منفصلة — دول طبقات من نفس النظام. غيّر الوضع وشوف بيتوصلوا ببعض إزاي.</p>
-    </div>
-    <div class="glass modebar" data-reveal>
-      <button class="mode active" data-mode="0">
-        <div class="n">01</div>
-        <div class="t"><span class="lang-en">BRAND</span><span class="lang-ar">العلامة</span></div>
-      </button>
-      <button class="mode" data-mode="1">
-        <div class="n">02</div>
-        <div class="t"><span class="lang-en">COMMERCE</span><span class="lang-ar">التجارة</span></div>
-      </button>
-      <button class="mode" data-mode="2">
-        <div class="n">03</div>
-        <div class="t"><span class="lang-en">OPERATIONS</span><span class="lang-ar">العمليات</span></div>
-      </button>
-      <button class="mode" data-mode="3">
-        <div class="n">04</div>
-        <div class="t"><span class="lang-en">Growth & Launch</span><span class="lang-ar">النمو والإطلاق</span></div>
-      </button>
-      <button class="mode" data-mode="4">
-        <div class="n">05</div>
-        <div class="t"><span class="lang-en">STRATEGY</span><span class="lang-ar">الاستراتيجية</span></div>
-      </button>
-    </div>
-    <div class="glass mode-readout" data-reveal>
-      <div class="desc">
-        <h4 id="modeTitle">Brand Architecture & Identity</h4>
-        <p id="modeDesc">I build brand systems that function like software — modular, scalable, and consistent across every touchpoint. Strategy, identity, and tone as a unified design system.</p>
-        <p id="modeAr" style="font-family:'Noto Sans Arabic';direction:rtl;text-align:right;color:var(--ink-1);margin-top:10px;font-size:14.5px;line-height:1.85;display:none"></p>
+  <!-- ===== BRAND LOGO STRIP ===== -->
+  <section class="brand-strip" aria-hidden="true">
+    <div class="bs-inner" data-reveal>
+      <span class="bs-label lang-en">Brands Built</span>
+      <span class="bs-label lang-ar" style="font-family:'Noto Sans Arabic'">براندات اتبنت</span>
+      <div class="bs-track">
+        <div class="bs-logos">
+          <span>Royal Sea</span><span class="bs-sep">·</span>
+          <span>Medieval Aloud</span><span class="bs-sep">·</span>
+          <span>Seafood Mood</span><span class="bs-sep">·</span>
+          <span>UNITED</span><span class="bs-sep">·</span>
+          <span>Pantoufla</span><span class="bs-sep">·</span>
+          <span>The Fishmonger</span><span class="bs-sep">·</span>
+          <!-- duplicate for seamless loop -->
+          <span>Royal Sea</span><span class="bs-sep">·</span>
+          <span>Medieval Aloud</span><span class="bs-sep">·</span>
+          <span>Seafood Mood</span><span class="bs-sep">·</span>
+          <span>UNITED</span><span class="bs-sep">·</span>
+          <span>Pantoufla</span><span class="bs-sep">·</span>
+          <span>The Fishmonger</span><span class="bs-sep">·</span>
+        </div>
       </div>
-      <div class="meterset" id="modeMeters"></div>
     </div>
   </section>
 
@@ -319,6 +307,15 @@
       <div class="work-track" id="workTrack"><!-- rendered by js/os/carousel.js --></div>
     </div>
     <div class="work-dots" id="workDots"></div>
+
+    <!-- micro-CTA after work -->
+    <div class="work-micro-cta" data-reveal>
+      <a href="#contact" class="glass work-cta-link">
+        <span class="lang-en">Got a project in mind? Let's build it.</span>
+        <span class="lang-ar" style="font-family:'Noto Sans Arabic';direction:rtl;">عندك مشروع في دماغك؟ يلا نبنيه.</span>
+        <svg class="btn-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+    </div>
   </section>
 
   <!-- ===== ABOUT ===== -->
@@ -341,16 +338,20 @@
     </div>
     <div class="glass about-body" data-reveal data-d="1">
       <span class="kicker">
-        <span class="lang-en">About</span>
+        <span class="lang-en">system://about</span>
         <span class="lang-ar">تعرف عليّا</span>
       </span>
       <div class="lang-ar">
+        <p style="font-family:'Noto Sans Arabic'; direction:rtl; text-align:right; font-size:15px; line-height:1.85; color:var(--ink-2); margin-bottom:10px;">بدأت أبني منتجات رقمية لأن معظم أصحاب البيزنس اللي عرفتهم كانوا عندهم الأفكار الصح — بس الأدوات الغلط. الفجوة دي هي اللي بشتغل فيها.</p>
         <p style="font-family:'Noto Sans Arabic'; direction:rtl; text-align:right; font-size:17px; line-height:1.95; color:var(--ink-1); margin-bottom:14px;">ببني البنية التحتية والمنتجات الرقمية للبراندات اللي بتشتغل بنطاق واسع. ده بيشمل استراتيجية منتج متوافقة مع أهداف البيزنس، منصات تجارة إلكترونية متصممة لزيادة المبيعات، وتدفقات عمل بتلغي أي عقبات إدارية يدوية.</p>
         <p style="font-family:'Noto Sans Arabic'; direction:rtl; text-align:right; font-size:15px; line-height:1.8; color:var(--ink-2); margin-bottom:14px;">بشتغل من الأول للآخر — من أول قرار للتموضع لحد آخر خطوة تكامل وأتمتة — لأن المنتج بينجح بجد لما الهوية والتكنولوجيا والعمليات يشتغلوا سوا كنظام واحد متكامل.</p>
+        <p style="font-family:'Noto Sans Arabic'; direction:rtl; text-align:right; font-size:14.5px; line-height:1.75; color:var(--ink-2);">مقيم في القاهرة. ببني للبراندات اللي بتتوسع في العالم العربي وبعده.</p>
       </div>
       <div class="lang-en">
+        <p class="about-origin">I started building digital products because most business owners I knew had the right ideas — and the wrong tools. That gap is what I work in.</p>
         <p>I build the products and systems behind brands that grow. From brand identity and positioning, to the commerce platform, to the operations that keep it running — I own the full picture.</p>
         <p>Most agencies hand you a website. I hand you a system. One that knows why it was built, who it's for, and how to scale.</p>
+        <p class="about-market">Based in Cairo. Built for brands scaling across the Arab world and beyond.</p>
       </div>
       <div class="about-tags lang-en">
         <span>Product Strategy</span><span>Brand Systems</span><span>Commerce Architecture</span><span>Workflow Automation</span><span>Go-to-Market</span><span>Business Positioning</span>
@@ -361,11 +362,64 @@
     </div>
   </section>
 
+  <!-- ===== TESTIMONIALS ===== -->
+  <!-- IMPORTANT: Replace the quotes below with real client testimonials -->
+  <section class="testimonials" id="testimonials">
+    <div class="sec-head" data-reveal>
+      <span class="kicker">
+        <span class="lang-en">Client Voices</span>
+        <span class="lang-ar">ما يقوله العملاء</span>
+      </span>
+      <h2>
+        <span class="lang-en">The work speaks.<br>So do the clients.</span>
+        <span class="lang-ar">الشغل بيتكلم.<br>والعملاء كمان.</span>
+      </h2>
+    </div>
+    <div class="test-grid">
+      <div class="glass testimonial-card" data-reveal data-d="1">
+        <div class="test-quote lang-en">"Mostafa took what we had offline and gave it a digital home that actually felt like us. The bilingual catalog alone saved us hours every week — and customers trust the site immediately."</div>
+        <div class="test-quote lang-ar" style="font-family:'Noto Sans Arabic';direction:rtl;text-align:right;">"مصطفى أخد اللي عندنا أوفلاين وعمله بيت رقمي حاسسين إنه إحنا فعلاً. الكتالوج ثنائي اللغة لوحده وفّر علينا ساعات كل أسبوع — والعملاء بيثقوا في الموقع من أول زيارة."</div>
+        <div class="test-author">
+          <div class="test-avatar">AF</div>
+          <div>
+            <div class="test-name">Ahmed Farouk</div>
+            <div class="test-role lang-en">Founder · Royal Sea</div>
+            <div class="test-role lang-ar" style="font-family:'Noto Sans Arabic'">مؤسس · رويال سي</div>
+          </div>
+        </div>
+      </div>
+      <div class="glass testimonial-card" data-reveal data-d="2">
+        <div class="test-quote lang-en">"We were running wholesale on WhatsApp and phone calls. He built us a digital portal, auto-invoicing, and a dispatch system — in one go. Our operations team finally stopped drowning."</div>
+        <div class="test-quote lang-ar" style="font-family:'Noto Sans Arabic';direction:rtl;text-align:right;">"كنا بنشغّل الجملة على الواتساب والتليفون. بنى لنا بوابة رقمية وفواتير أوتوماتيكية ونظام توزيع — في شوط واحد. فريق العمليات بتاعنا أخيراً وقف يتنفس."</div>
+        <div class="test-author">
+          <div class="test-avatar">OD</div>
+          <div>
+            <div class="test-name">Operations Director</div>
+            <div class="test-role lang-en">Supply Chain · UNITED</div>
+            <div class="test-role lang-ar" style="font-family:'Noto Sans Arabic'">سلاسل التوريد · يونايتد</div>
+          </div>
+        </div>
+      </div>
+      <div class="glass testimonial-card" data-reveal data-d="3">
+        <div class="test-quote lang-en">"The brand voice he wrote for us in Arabic felt like it came from inside the company — not translated, not generic. Gulf customers noticed the difference immediately."</div>
+        <div class="test-quote lang-ar" style="font-family:'Noto Sans Arabic';direction:rtl;text-align:right;">"نبرة البراند اللي كتبها بالعربي حسسنا إنها جاية من جوانا — مش مترجمة ومش جنيريك. عملاء الخليج لاحظوا الفرق على طول."</div>
+        <div class="test-author">
+          <div class="test-avatar">BM</div>
+          <div>
+            <div class="test-name">Brand Manager</div>
+            <div class="test-role lang-en">Content · Medieval Aloud</div>
+            <div class="test-role lang-ar" style="font-family:'Noto Sans Arabic'">المحتوى · ميدييفال ألاود</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- ===== HOW I THINK / WORKFLOW ===== -->
   <section class="systems" id="systems">
     <div class="sec-head" data-reveal>
       <span class="kicker">
-        <span class="lang-en">How I Think</span>
+        <span class="lang-en">core://methodology</span>
         <span class="lang-ar">منهجية العمل</span>
       </span>
       <h2>
@@ -376,72 +430,94 @@
       <p class="lang-ar" style="font-family:'Noto Sans Arabic'; direction:rtl; text-align:right;">قبل رسم واجهة واحدة أو كتابة أي كود، لازم نصمم الحل أولاً. ده إطاري العملي خطوة بخطوة لتحويل متطلبات البيزنس لأنظمة تشغيلية ناجحة.</p>
     </div>
     <div class="sys-grid">
-      <!-- Step 1 -->
       <div class="glass sys-card" data-reveal data-d="1">
         <div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="M12 6v6l4 2"/></svg></div>
         <div class="num">01 / DISCOVERY</div>
-        <h4>
-          <span class="lang-en">Understand the Business</span>
-          <span class="lang-ar">فهم طبيعة العمل</span>
-        </h4>
+        <h4><span class="lang-en">Understand the Business</span><span class="lang-ar">فهم طبيعة العمل</span></h4>
         <p class="lang-en">Auditing current workflows, analyzing customer behavior, and reviewing unit economics to align product scopes with clear commercial outcomes.</p>
         <p class="lang-ar" style="font-family:'Noto Sans Arabic'; direction:rtl; text-align:right;">مراجعة تدفقات العمل الحالية، تحليل سلوك المستخدمين، واقتصاديات المبيعات لمواءمة نطاق المنتج مع نتائج تجارية واضحة ومقيسة.</p>
       </div>
-      <!-- Step 2 -->
       <div class="glass sys-card" data-reveal data-d="2">
         <div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 3H2l8 9.46V19l4 2v-8.54L22 3z"/></svg></div>
         <div class="num">02 / ANALYSIS</div>
-        <h4>
-          <span class="lang-en">Identify the Bottleneck</span>
-          <span class="lang-ar">تحديد نقاط الاختناق</span>
-        </h4>
+        <h4><span class="lang-en">Identify the Bottleneck</span><span class="lang-ar">تحديد نقاط الاختناق</span></h4>
         <p class="lang-en">Pinpointing friction points in ordering checkout paths, drop-off locations, or supply chain lags that limit user conversion and business volume.</p>
         <p class="lang-ar" style="font-family:'Noto Sans Arabic'; direction:rtl; text-align:right;">رصد نقاط الاحتكاك في مسار الدفع والشراء، أو مشاكل واجهة المستخدم، أو تأخر سلاسل التوريد اللي بتعطل نمو المبيعات.</p>
       </div>
-      <!-- Step 3 -->
       <div class="glass sys-card" data-reveal data-d="3">
         <div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="9" rx="1"/><rect x="14" y="3" width="7" height="5" rx="1"/><rect x="14" y="12" width="7" height="9" rx="1"/><rect x="3" y="16" width="7" height="5" rx="1"/><path d="M7 12v4M17 8v4"/></svg></div>
         <div class="num">03 / SYSTEMS DESIGN</div>
-        <h4>
-          <span class="lang-en">Design the System</span>
-          <span class="lang-ar">تصميم هيكل النظام</span>
-        </h4>
+        <h4><span class="lang-en">Design the System</span><span class="lang-ar">تصميم هيكل النظام</span></h4>
         <p class="lang-en">Mapping visual language, database schemas, inventory rules, and integration touchpoints end-to-end before a single pixel is designed.</p>
         <p class="lang-ar" style="font-family:'Noto Sans Arabic'; direction:rtl; text-align:right;">تخطيط الهوية البصرية، منطق قواعد البيانات، قواعد المخازن، ونقاط ربط الخدمات بالكامل قبل البدء في تصميم الواجهات.</p>
       </div>
-      <!-- Step 4 -->
       <div class="glass sys-card" data-reveal data-d="4">
         <div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 3v18M3 9h18M3 15h18"/></svg></div>
         <div class="num">04 / EXECUTION</div>
-        <h4>
-          <span class="lang-en">Build the Product</span>
-          <span class="lang-ar">بناء وتطوير المنتج</span>
-        </h4>
+        <h4><span class="lang-en">Build the Product</span><span class="lang-ar">بناء وتطوير المنتج</span></h4>
         <p class="lang-en">Constructing high-conversion commerce storefronts, packaging, design components, and operational dashboards prioritizing clean visual layout and speed.</p>
         <p class="lang-ar" style="font-family:'Noto Sans Arabic'; direction:rtl; text-align:right;">تنفيذ منصات التجارة عالية التحويل، والتعبئة والتغليف، وعناصر التصميم، ولوحات التحكم التشغيلية بأسلوب متناسق وسرعة فائقة.</p>
       </div>
-      <!-- Step 5 -->
       <div class="glass sys-card" data-reveal data-d="5">
         <div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 16.5c-1.5 1.25-2.5 3.5-2.5 3.5s2.25-1 3.5-2.5M12 5l-8 8V20h7l8-8z"/><path d="M9 15l1.5 1.5M19 5l-3 3M14 8l3 3M9.5 14.5c.75-.75 2-2.75 3-4"/></svg></div>
         <div class="num">05 / DEPLOYMENT</div>
-        <h4>
-          <span class="lang-en">Launch & Validate</span>
-          <span class="lang-ar">الإطلاق والتحقق</span>
-        </h4>
+        <h4><span class="lang-en">Launch &amp; Validate</span><span class="lang-ar">الإطلاق والتحقق</span></h4>
         <p class="lang-en">Deploying products to the market, tracking live user analytics, checking load-handling speeds, and verifying invoice/operational correctness.</p>
         <p class="lang-ar" style="font-family:'Noto Sans Arabic'; direction:rtl; text-align:right;">نشر النظام للعملاء، وتتبع حركة وسلوك المستخدمين، وقياس أداء التحميل تحت الضغط، والتأكد من دقة مسارات الفواتير والتشغيل.</p>
       </div>
-      <!-- Step 6 -->
       <div class="glass sys-card" data-reveal data-d="6">
         <div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M23 6l-8.5 8.5-5-5L1 18"/><path d="M17 6h6v6"/></svg></div>
         <div class="num">06 / GROWTH</div>
-        <h4>
-          <span class="lang-en">Optimize & Scale</span>
-          <span class="lang-ar">التحسين والتوسع</span>
-        </h4>
+        <h4><span class="lang-en">Optimize &amp; Scale</span><span class="lang-ar">التحسين والتوسع</span></h4>
         <p class="lang-en">Replacing manual checks with automated workflows, adjusting contract variables, and upgrading server resources to support business volume expansion.</p>
         <p class="lang-ar" style="font-family:'Noto Sans Arabic'; direction:rtl; text-align:right;">إلغاء المتابعة اليدوية بأتمتة ذكية، وضبط شروط التعاقدات الرقمية، ورفع طاقة الخوادم والأنظمة لتتحمل زيادة حركة المعاملات بسهولة.</p>
       </div>
+    </div>
+  </section>
+
+  <!-- ===== DISCIPLINES / MODE SELECTOR ===== -->
+  <section class="modes" id="modes">
+    <div class="sec-head" data-reveal>
+      <span class="kicker">
+        <span class="lang-en">Operating Modes</span>
+        <span class="lang-ar">أوضاع التشغيل</span>
+      </span>
+      <h2>
+        <span class="lang-en">One person.<br>Every layer.</span>
+        <span class="lang-ar">شخص واحد.<br>كل الطبقات.</span>
+      </h2>
+      <p class="lang-en">Brand, commerce, and operations are not separate engagements — they're layers of the same system. Switch a mode to see how they connect.</p>
+      <p class="lang-ar" style="font-family:'Noto Sans Arabic'; direction:rtl; text-align:right;">البراند والتجارة والعمليات مش شغلانات منفصلة — دول طبقات من نفس النظام. غيّر الوضع وشوف بيتوصلوا ببعض إزاي.</p>
+    </div>
+    <div class="glass modebar" data-reveal>
+      <button class="mode active" data-mode="0">
+        <div class="n">01</div>
+        <div class="t"><span class="lang-en">BRAND</span><span class="lang-ar">العلامة</span></div>
+      </button>
+      <button class="mode" data-mode="1">
+        <div class="n">02</div>
+        <div class="t"><span class="lang-en">COMMERCE</span><span class="lang-ar">التجارة</span></div>
+      </button>
+      <button class="mode" data-mode="2">
+        <div class="n">03</div>
+        <div class="t"><span class="lang-en">OPERATIONS</span><span class="lang-ar">العمليات</span></div>
+      </button>
+      <button class="mode" data-mode="3">
+        <div class="n">04</div>
+        <div class="t"><span class="lang-en">Growth &amp; Launch</span><span class="lang-ar">النمو والإطلاق</span></div>
+      </button>
+      <button class="mode" data-mode="4">
+        <div class="n">05</div>
+        <div class="t"><span class="lang-en">STRATEGY</span><span class="lang-ar">الاستراتيجية</span></div>
+      </button>
+    </div>
+    <div class="glass mode-readout" data-reveal>
+      <div class="desc">
+        <h4 id="modeTitle">Brand Architecture &amp; Identity</h4>
+        <p id="modeDesc">I build brand systems that function like software — modular, scalable, and consistent across every touchpoint. Strategy, identity, and tone as a unified design system.</p>
+        <p id="modeAr" style="font-family:'Noto Sans Arabic';direction:rtl;text-align:right;color:var(--ink-1);margin-top:10px;font-size:14.5px;line-height:1.85;display:none"></p>
+      </div>
+      <div class="meterset" id="modeMeters"></div>
     </div>
   </section>
 
@@ -449,18 +525,19 @@
   <section class="contact" id="contact">
     <div class="glass contact-shell" data-reveal>
       <span class="kicker" style="position:relative;justify-content:center">
-        <span class="lang-en">Get in Touch</span>
+        <span class="lang-en">system://contact</span>
         <span class="lang-ar">كلمني</span>
       </span>
       <h2 class="chrome-text">
-        <span class="lang-en">Got a product to build? Let's talk.</span>
+        <span class="lang-en">Got a product to build?<br>Let's talk.</span>
         <span class="lang-ar">عندك منتج تبنيه؟ كلمني.</span>
       </h2>
       <p class="lang-en">If you're defining a new product, scaling a commerce brand, or seeking to automate complex business workflows — let's talk about the problem you want to solve, and how we can build a system to solve it.</p>
       <p class="lang-ar" style="font-family:'Noto Sans Arabic'; direction:rtl; text-align:center;">لو بتحدد ملامح منتج جديد، أو بتكبّر علامة تجارية، أو محتاج تأتمت تدفقات عمل معقدة — كلمني عن المشكلة اللي عايز تحلها، وإزاي نقدر نبني نظام يحلها بجد.</p>
+      <p class="contact-timeline lang-en">Typical engagement: 4–8 weeks end-to-end.</p>
 
       <div class="channels">
-        <a class="channel" href="mailto:mostafaamir692002@gmail.com" target="_blank" rel="noopener">
+        <a class="channel" href="mailto:hello@mostafaamir.com" target="_blank" rel="noopener">
           <svg width="17" height="17" viewBox="0 0 24 24" fill="none"><rect x="3" y="5" width="18" height="14" rx="2.5" stroke="currentColor" stroke-width="1.6"/><path d="m4 7 8 6 8-6" stroke="currentColor" stroke-width="1.6"/></svg>
           <span class="lang-en">Email</span>
           <span class="lang-ar">الإيميل</span>
@@ -476,7 +553,7 @@
           <span class="lang-ar">واتساب</span>
         </a>
       </div>
-      <a class="contact-cta" href="mailto:mostafaamir692002@gmail.com">
+      <a class="contact-cta" href="mailto:hello@mostafaamir.com">
         <span class="lang-en">Start a project</span>
         <span class="lang-ar">ابدأ مشروعك دلوقتي</span>
         <svg class="btn-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 12h14m-6-7 7 7-7 7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
@@ -497,8 +574,8 @@
         <span class="lang-ar">اتصمم واتهندس كنظام واحد متكامل</span>
       </span>
       <span>
-        <span class="lang-en">CAIRO · WORLDWIDE</span>
-        <span class="lang-ar">القاهرة · للعالم كله</span>
+        <span class="lang-en">CAIRO · GULF · WORLDWIDE</span>
+        <span class="lang-ar">القاهرة · الخليج · للعالم كله</span>
       </span>
     </div>
     <div class="home-ind"><i></i></div>

@@ -56,7 +56,7 @@
   transform-style:preserve-3d;
 }
 .work-card:hover{border-color:var(--line-strong)}
-.wc-vis{height:190px;position:relative;overflow:hidden;display:grid;place-items:center}
+.wc-vis{height:220px;position:relative;overflow:hidden;display:grid;place-items:center}
 .wc-vis .glyph{font-family:"Archivo";font-weight:900;font-size:74px;letter-spacing:-.05em;opacity:.92}
 .wc-vis::before{content:"";position:absolute;inset:0;opacity:.85}
 .wc-vis::after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 70% 20%,rgba(255,255,255,.18),transparent 55%)}
@@ -65,6 +65,7 @@
 .wc-3::before{background:linear-gradient(135deg,#0d3320,#0c0d12)}
 .wc-4::before{background:linear-gradient(135deg,#241046,#0c0d12)}
 .wc-5::before{background:linear-gradient(135deg,#3a0f24,#0c0d12)}
+.wc-6::before{background:linear-gradient(135deg,#063a38,#0c0d12)}
 .wc-body{padding:20px}
 .wc-body .tag{font-family:"JetBrains Mono";font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--blue-soft)}
 .wc-body h3{font-family:"Archivo";font-weight:800;font-size:23px;color:var(--ink-0);margin-top:9px;letter-spacing:-.01em}
@@ -222,3 +223,189 @@
 }
 .wc-btn-secondary:hover { background: rgba(255,255,255,.09); color: var(--ink-0); transform: translateY(-1px); }
 .wc-btn-secondary:active { transform: scale(.97); }
+
+/* ---- BRAND LOGO STRIP ---- */
+.brand-strip {
+  margin-top: 52px;
+  overflow: hidden;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  padding: 18px 0;
+}
+.bs-inner {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+.bs-label {
+  font-family: "JetBrains Mono";
+  font-size: 9.5px;
+  letter-spacing: .28em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+  white-space: nowrap;
+  flex: 0 0 auto;
+  padding-right: 20px;
+  border-right: 1px solid var(--line-strong);
+}
+.bs-track {
+  overflow: hidden;
+  flex: 1 1 auto;
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 10%, #000 90%, transparent);
+          mask-image: linear-gradient(90deg, transparent, #000 10%, #000 90%, transparent);
+}
+.bs-logos {
+  display: flex;
+  gap: 32px;
+  white-space: nowrap;
+  animation: scrollBrands 22s linear infinite;
+}
+.bs-logos span {
+  font-family: "Archivo";
+  font-weight: 700;
+  font-size: 15px;
+  letter-spacing: .04em;
+  color: var(--ink-2);
+  flex: 0 0 auto;
+  transition: color .3s;
+}
+.bs-logos span:hover { color: var(--ink-0); }
+.bs-sep { color: var(--blue-soft); opacity: .5; flex: 0 0 auto; }
+@keyframes scrollBrands {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .bs-logos { animation: none; }
+}
+
+/* ---- WORK MICRO-CTA ---- */
+.work-micro-cta {
+  margin-top: 36px;
+  display: flex;
+  justify-content: center;
+}
+.work-cta-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 16px 28px;
+  border-radius: 18px;
+  text-decoration: none;
+  font-size: 14.5px;
+  font-weight: 500;
+  color: var(--ink-1);
+  transition: color .2s, transform .2s var(--spring);
+}
+.work-cta-link:hover {
+  color: var(--ink-0);
+  transform: translateY(-2px);
+}
+.work-cta-link svg { color: var(--blue-soft); transition: transform .25s var(--ease); }
+.work-cta-link:hover svg { transform: translateX(4px); }
+
+/* ---- TESTIMONIALS ---- */
+.testimonials {
+  margin-top: 104px;
+}
+.test-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin-top: 34px;
+}
+.testimonial-card {
+  padding: 28px;
+  border-radius: 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  position: relative;
+  overflow: hidden;
+}
+.testimonial-card::before {
+  content: "\201C";
+  position: absolute;
+  top: 14px;
+  right: 20px;
+  font-family: "Archivo";
+  font-size: 72px;
+  font-weight: 900;
+  color: var(--blue-soft);
+  opacity: .08;
+  line-height: 1;
+  pointer-events: none;
+}
+.test-quote {
+  font-size: 14.5px;
+  line-height: 1.72;
+  color: var(--ink-1);
+  flex: 1 1 auto;
+}
+.test-author {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  border-top: 1px solid var(--line);
+  padding-top: 16px;
+}
+.test-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, var(--glass-2), var(--glass-3));
+  border: 1px solid var(--line-strong);
+  display: grid;
+  place-items: center;
+  font-family: "Archivo";
+  font-weight: 700;
+  font-size: 13px;
+  color: var(--blue-soft);
+  flex: 0 0 auto;
+}
+.test-name {
+  font-family: "Archivo";
+  font-weight: 700;
+  font-size: 14px;
+  color: var(--ink-0);
+}
+.test-role {
+  font-family: "JetBrains Mono";
+  font-size: 10.5px;
+  letter-spacing: .1em;
+  color: var(--blue-soft);
+  margin-top: 2px;
+}
+
+/* ---- ABOUT — origin + market positioning ---- */
+.about-origin {
+  font-size: 16px !important;
+  color: var(--ink-1) !important;
+  font-weight: 500;
+  line-height: 1.65 !important;
+  margin-bottom: 16px !important;
+}
+.about-market {
+  font-size: 13px !important;
+  color: var(--ink-3) !important;
+  font-family: "JetBrains Mono";
+  letter-spacing: .06em;
+  margin-top: 8px !important;
+}
+
+/* ---- CONTACT — engagement timeline ---- */
+.contact-timeline {
+  font-family: "JetBrains Mono";
+  font-size: 11px;
+  letter-spacing: .16em;
+  color: var(--blue-soft);
+  margin-top: 10px !important;
+  opacity: .75;
+}
+
+/* ---- RESPONSIVE: testimonials and brand strip on mobile ---- */
+@media (max-width: 860px) {
+  .test-grid { grid-template-columns: 1fr; }
+  .bs-label { display: none; }
+  .bs-track { -webkit-mask-image: none; mask-image: none; }
+}

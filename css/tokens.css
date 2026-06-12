@@ -42,6 +42,11 @@
   --spring:cubic-bezier(.34,1.56,.64,1);
 }
 
+/* light mode: shine effect must multiply to avoid white flash on light bg */
+body.light-mode .hero-title .shine::after {
+  mix-blend-mode: multiply;
+}
+
 /* ============ LIGHT MODE VARIABLES ============ */
 body.light-mode {
   --void-0: #f2f4f8;

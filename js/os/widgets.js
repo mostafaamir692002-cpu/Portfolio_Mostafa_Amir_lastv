@@ -55,6 +55,32 @@
       runFallbackBattery();
     }
 
+    /* ---- win-pill status cycling ---- */
+    var pill = MOS.$("#winPill");
+    var pillMessages = [
+      "product.builder · live",
+      "system.status · operational",
+      "projects.active · 12",
+      "cairo · gmt+2"
+    ];
+    var pillIdx = 0;
+    function cyclePill() {
+      if (!pill) return;
+      pillIdx = (pillIdx + 1) % pillMessages.length;
+      var next = pillMessages[pillIdx];
+      if (MOS.hasGSAP()) {
+        window.gsap.to(pill, { opacity: 0, duration: .25, onComplete: function () {
+          var before = pill.querySelector("::before");
+          /* update just the text node (keep the ::before dot via CSS) */
+          pill.childNodes[pill.childNodes.length - 1].textContent = next;
+          window.gsap.to(pill, { opacity: 1, duration: .3 });
+        }});
+      } else {
+        pill.lastChild.textContent = next;
+      }
+    }
+    setInterval(cyclePill, 3500);
+
     /* ---- weather (cached) ---- */
     function getWeatherIcon(desc, isNight) {
       var d = (desc || "").toLowerCase();

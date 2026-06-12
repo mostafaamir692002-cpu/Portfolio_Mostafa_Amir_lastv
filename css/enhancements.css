@@ -263,3 +263,41 @@
 @media (max-width: 480px) {
   .ph-badge { display: none; }
 }
+
+/* ---- 21. Hero manifesto — glow left border accent ---- */
+.hero-manifesto {
+  border-left: 2px solid rgba(90,169,255,.4) !important;
+  border-top: none !important;
+  border-bottom: none !important;
+  border-right: none !important;
+  background: rgba(90,169,255,.05) !important;
+  border-radius: 0 12px 12px 0 !important;
+  text-align: left;
+}
+
+/* ---- 22. Testimonial cards — subtle top accent on hover ---- */
+.testimonial-card {
+  transition: transform .2s var(--spring), box-shadow .3s, border-color .3s;
+}
+.testimonial-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(90,169,255,.18) !important;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.1), 0 24px 56px rgba(0,0,0,.55), 0 0 28px -8px rgba(90,169,255,.18) !important;
+}
+
+/* ---- 23. Brand strip — hover brightens entire track ---- */
+.brand-strip { transition: background .3s; }
+.brand-strip:hover .bs-logos span { color: var(--ink-1); }
+
+/* ---- 24. Work micro-CTA — section gradient ---- */
+.work-micro-cta .work-cta-link {
+  background: linear-gradient(90deg, rgba(90,169,255,.06), rgba(191,90,242,.04));
+}
+.work-micro-cta .work-cta-link:hover {
+  background: linear-gradient(90deg, rgba(90,169,255,.1), rgba(191,90,242,.07));
+}
+
+/* ---- 25. osBrandLabel — interactive feedback ---- */
+#osBrandLabel:hover {
+  color: var(--blue-soft) !important;
+}
