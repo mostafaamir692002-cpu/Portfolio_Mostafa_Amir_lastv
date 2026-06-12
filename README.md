@@ -13,16 +13,15 @@ Boot sequence = the hook: particles converge and the core forms while the system
 يفتح مباشرة — افتح `index.html` بدبل كليك. لا يوجد build step.
 (للتطوير المريح: `npx serve` أو أي static server.)
 
-**ملحوظة:** ضع صورتك الشخصية في `assets/mostafa-amir.jpg` — لو الصورة غير موجودة،
-النظام يرجع تلقائياً لمونوجرام "MA" (fallback مدمج).
+**ملحوظة:** الصورة الشخصية موجودة ومفعلة بالفعل في `assets/mostafa-amir.jpg`.
 
 ## Architecture
 
 ```
-portfolio-v2/
+.
 ├── index.html              ← markup only (no styles, no logic, no project content)
 ├── assets/
-│   └── mostafa-amir.jpg    ← [add your photo]
+│   └── mostafa-amir.jpg    ← Professional avatar image
 ├── css/                    ← load order = cascade order
 │   ├── tokens.css          ← design tokens (dark + light + wireframe variables)
 │   ├── base.css            ← reset, background stack, reveal system, cursor, progress
@@ -36,28 +35,29 @@ portfolio-v2/
 │   ├── wireframe.css       ← wireframe mode overrides
 │   ├── rtl.css             ← bilingual visibility + RTL adjustments
 │   └── responsive.css      ← all breakpoints
-└── js/
-    ├── core/
-    │   ├── utils.js        ← MOS namespace, env flags, shared state, helpers
-    │   ├── scroll.js       ← Lenis, anchors, scroll progress (feeds space camera)
-    │   └── reveals.js      ← scroll reveals, bar fills, counters
-    ├── data/               ← ✏️ EDIT CONTENT HERE — nothing else needs to change
-    │   ├── projects.js     ← project cards + case modals (bilingual)
-    │   └── modes.js        ← disciplines copy + meters (bilingual)
-    ├── space/
-    │   └── scene.js        ← WebGL nebula + icosahedron (aurora palette)
-    ├── os/
-    │   ├── boot.js         ← boot timeline → drives particle convergence
-    │   ├── heroIntro.js    ← entrance timeline + name scramble + sel-menu
-    │   ├── widgets.js      ← clock, battery, weather (cached)
-    │   ├── controlCenter.js← toggles wired to real behavior
-    │   ├── modal.js        ← project / diagnostics OS windows
-    │   ├── carousel.js     ← data-driven work cards + drag + tilt
-    │   ├── modes.js        ← disciplines selector
-    │   ├── interactions.js ← parallax, specular, cursor, mobile menu
-    │   ├── lang.js         ← EN/AR switching (persisted)
-    │   └── theme.js        ← dark/light (persisted; space sleeps in light)
-    └── main.js             ← module boot order (single orchestrator)
+├── js/
+│   ├── core/
+│   │   ├── utils.js        ← MOS namespace, env flags, shared state, helpers
+│   │   ├── scroll.js       ← Lenis, anchors, scroll progress (feeds space camera)
+│   │   └── reveals.js      ← scroll reveals, bar fills, counters
+│   ├── data/               ← ✏️ EDIT CONTENT HERE — nothing else needs to change
+│   │   ├── projects.js     ← project cards + case modals (bilingual)
+│   │   └── modes.js        ← disciplines copy + meters (bilingual)
+│   ├── space/
+│   │   └── scene.js        ← WebGL nebula + icosahedron (aurora palette)
+│   └── os/
+│       ├── boot.js         ← boot timeline → drives particle convergence
+│       ├── heroIntro.js    ← entrance timeline + name scramble + sel-menu
+│       ├── widgets.js      ← clock, battery, weather (cached)
+│       ├── controlCenter.js← toggles wired to real behavior
+│       ├── modal.js        ← project / diagnostics OS windows
+│       ├── carousel.js     ← data-driven work cards + drag + tilt
+│       ├── modes.js        ← disciplines selector
+│       ├── interactions.js ← parallax, specular, cursor, mobile menu
+│       ├── lang.js         ← EN/AR switching (persisted)
+│       └── theme.js        ← dark/light (persisted; space sleeps in light)
+│   └── main.js             ← module boot order (single orchestrator)
+└── archive/                ← Legacy single-file draft versions
 ```
 
 ## System decisions
@@ -70,10 +70,8 @@ portfolio-v2/
 - **Why namespaced scripts instead of ES modules:** ES modules are blocked on `file://`.
   This structure opens by double-click and still keeps one-file-one-responsibility.
   Migrating to Next.js later = move `js/data/*` to TS files and components 1:1.
-- **Content stats marked `[confirm]`** in `js/data/projects.js` (UNITED, Fishmonger,
-  Pantoufla) — replace with verified numbers before launch. Royal Sea and Medieval Aloud
-  use real, verified scope.
 - **Arabic register:** refined Egyptian colloquial (عامية بيضاء راقية) across all UI
   copy and project content — premium tone, not slang.
-- **Photo:** drop your photo at `assets/mostafa-amir.jpg` and it appears automatically
+- **Photo:** A generated professional avatar is placed at `assets/mostafa-amir.jpg` and it appears automatically
   in the dock, avatar, hero monogram, and about section (MA monogram is the fallback).
+

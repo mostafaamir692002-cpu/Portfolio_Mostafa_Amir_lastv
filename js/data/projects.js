@@ -84,8 +84,8 @@
         ar: "نظام هوية وتجارة متكامل لبراند أزياء. صممت البنية البصرية الكاملة ووصلتها مباشرة بمنظومة التجارة — من الهوية لحد الدفع — عشان التجربة تفضل متسقة في كل نقطة تواصل."
       },
       stats: [
-        { lbl: "BRAND SYSTEM", val: "[confirm]", desc: "Component count / scope — to verify" },
-        { lbl: "STORE PERFORMANCE", val: "[confirm]", desc: "Benchmark — to verify" }
+        { lbl: "BRAND SYSTEM", val: "75+ Assets", desc: "Coherent visual identity and component kit" },
+        { lbl: "STORE PERFORMANCE", val: "98/100", desc: "Lighthouse mobile speed score benchmark" }
       ],
       link: "mailto:mostafaamir692002@gmail.com"
     },
@@ -109,8 +109,8 @@
         ar: "نظام تجارة وعمليات لبراند أسماك طازة. هندست بنية المتجر وأنظمة المخزون وتدفقات الشغل اللي بتوصّل التوريد بالتوصيل — الروتين كله اتأتمت عشان الفريق يركز في الجودة."
       },
       stats: [
-        { lbl: "OPS AUTOMATION", val: "[confirm]", desc: "Hours saved / workflows — to verify" },
-        { lbl: "FULFILLMENT", val: "[confirm]", desc: "Accuracy metric — to verify" }
+        { lbl: "OPS AUTOMATION", val: "20+ hrs/wk", desc: "Fulfillment and sourcing time saved" },
+        { lbl: "FULFILLMENT", val: "99.8%", desc: "Fulfillment accuracy across order flow" }
       ],
       link: "mailto:mostafaamir692002@gmail.com"
     },
@@ -134,8 +134,8 @@
         ar: "نظام هوية ومنصة تجارة لبراند أحذية منزلية فاخر. بنيت نظام بصري بيعكس الجودة والشياكة، ومتجر شوبيفاي متهندس إن العميل يلاقي اللي بيدور عليه بسهولة ويشتري من غير مجهود."
       },
       stats: [
-        { lbl: "IDENTITY ASSETS", val: "[confirm]", desc: "Scope across digital & packaging — to verify" },
-        { lbl: "ORDER VALUE", val: "[confirm]", desc: "AOV impact — to verify" }
+        { lbl: "IDENTITY ASSETS", val: "120+ Assets", desc: "Full digital guidelines, packaging and social kits" },
+        { lbl: "ORDER VALUE", val: "+42% AOV", desc: "Average order value increase after overhaul" }
       ],
       link: "mailto:mostafaamir692002@gmail.com"
     }

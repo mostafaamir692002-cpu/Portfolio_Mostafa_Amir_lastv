@@ -24,7 +24,7 @@
     if (!m) return;
     var isAr = (document.documentElement.getAttribute("lang") || "en") === "ar";
     var modeTitle = MOS.$("#modeTitle"), modeDesc = MOS.$("#modeDesc"), modeAr = MOS.$("#modeAr");
-    if (modeTitle) modeTitle.textContent = m.t;
+    if (modeTitle) modeTitle.textContent = isAr && m.arT ? m.arT : m.t;
     if (modeDesc) { modeDesc.textContent = m.d; modeDesc.style.display = isAr ? "none" : "block"; }
     if (modeAr) { modeAr.textContent = m.ar; modeAr.style.display = isAr ? "block" : "none"; }
     renderMeters(m.m);
