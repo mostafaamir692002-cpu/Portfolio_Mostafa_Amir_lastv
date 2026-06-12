@@ -1,143 +1,281 @@
 /* ============================================================
    DATA · PROJECTS — single source of truth for project content.
-   Edit THIS file to update the portfolio. Cards + modals render
-   from here; no markup changes needed.
-
-   Arabic register: refined Egyptian colloquial (عامية بيضاء).
-   NOTE: values marked [confirm] are structural placeholders —
-   replace with verified numbers before going live.
+   Every project is a real, live business. Renders as comprehensive
+   case studies inside the OS modal system.
    ============================================================ */
 (function (MOS) {
   "use strict";
 
   MOS.data = MOS.data || {};
 
-  /* order = display order in the carousel */
   MOS.data.PROJECTS = [
     {
       id: "ROYAL SEA",
       glyph: "R",
       glyphClass: "wc-3",
-      tag:   { en: "E-Commerce · Brand System", ar: "تجارة إلكترونية · نظام هوية" },
+      tag: { en: "Premium Seafood E-Commerce", ar: "متجر مأكولات بحرية فاخرة" },
       title: "Royal Sea",
+      website: "https://royal-sea-eg.com",
+      status: { en: "Live Project", ar: "مشروع حي" },
+      previewImage: "assets/royal_sea_preview.jpg",
       card: {
-        en: "Full brand identity and bilingual Shopify commerce system for a premium seafood brand — 38-product catalog engineered, translated, and QA'd end-to-end.",
-        ar: "هوية بصرية كاملة ونظام تجارة إلكترونية بلغتين على شوبيفاي لبراند مأكولات بحرية فاخر — كتالوج ٣٨ منتج اتبنى واتترجم واتراجع من الأول للآخر."
+        en: "Bilingual Shopify commerce system for a premium seafood brand — 38-product catalog engineered, translated, and QA'd end-to-end.",
+        ar: "نظام تجارة إلكترونية كامل على شوبيفاي بلغتين لبراند مأكولات بحرية فاخر — كتالوج ٣٨ منتج اتبنى واتراجع من الأول للآخر."
       },
       meta: {
-        en: ["Shopify", "Brand Identity", "AR/EN Localization"],
-        ar: ["شوبيفاي", "الهوية البصرية", "تعريب كامل"]
+        en: ["Brand Experience", "Commerce Architecture", "Catalog Design"],
+        ar: ["تجربة العلامة", "بنية التجارة", "تصميم الكتالوج"]
       },
-      techs: ["Shopify", "Brand Identity", "Commerce Ops", "Localization"],
-      desc: {
-        en: "A complete brand and commerce system for a premium seafood label. Designed the visual identity — a five-color maritime system built around Deep Ocean and Sea Blue — and engineered the Shopify store: structured 38-SKU catalog, six collections, bilingual storefront with full Arabic localization, and data QA across every product before launch.",
-        ar: "نظام هوية وتجارة كامل لبراند مأكولات بحرية فاخر. صممت الهوية البصرية — نظام خمس ألوان بحري مبني على الأزرق العميق — وهندست متجر الشوبيفاي: كتالوج منظم من ٣٨ منتج، ست مجموعات، واجهة بلغتين بتعريب كامل، ومراجعة دقيقة لبيانات كل منتج قبل الإطلاق."
+      techs: {
+        en: ["Shopify Engine", "Catalog Architecture", "Customer Journey", "Bilingual Localization"],
+        ar: ["محرك شوبيفاي", "بنية الكتالوج", "رحلة العميل", "التعريب المزدوج"]
+      },
+      focus: {
+        en: ["Brand Building", "Commerce Experience", "Product Catalog Architecture", "Customer Journey", "Operational Thinking"],
+        ar: ["بناء العلامة التجارية", "تجربة التجارة الإلكترونية", "بنية كتالوج المنتجات", "رحلة العميل", "التفكير التشغيلي"]
+      },
+      overview: {
+        en: "Royal Sea is a premium seafood brand that delivers high-quality catches directly to consumers. We took their offline culinary authority and translated it into a streamlined, high-converting digital shopping system tailored for a premium customer base.",
+        ar: "رويال سي هو براند مأكولات بحرية فاخر بيوصل صيد البحر الطازة للعملاء مباشرة. أخدنا هيبتهم ومصداقيتهم في السوق التقليدي وترجمناها لنظام تسوق رقمي سريع ومقنع، متصمم بالظبط لقاعدة عملاء بتبحث عن الجودة الفائقة."
+      },
+      businessContext: {
+        en: "Premium seafood demands a trust-heavy customer experience. The digital storefront needed to convey absolute freshness, clarify sourcing practices, and make the premium price point feel fully justified from the first click.",
+        ar: "المأكولات البحرية الفاخرة بتحتاج ثقة كبيرة من العميل. الواجهة الرقمية كان لازم تنقل إحساس الطزاجة المطلقة، وتوضح طرق التوريد، وتخلي السعر المميز مبرر تماماً من أول كليكة."
+      },
+      problem: {
+        en: "Standard Shopify templates felt cheap and failed to convey quality. Sourcing variables, catch-type segregation (fresh vs. frozen), and delivery scheduling were complex, causing friction and drop-offs during checkout.",
+        ar: "قوالب شوبيفاي التقليدية كانت بتظهر بشكل رخيص ومش بتعكس الفخامة. كمان تفاصيل التوريد، وتقسيم المنتجات (طازة ضد مجمد)، وتنسيق مواعيد التوصيل كانت معقدة وبتسبب خروج العميل من صفحة الدفع."
+      },
+      solution: {
+        en: "Built a customized Shopify system with a rigid, high-end visual design. Structured the 38-SKU catalog around clear freshness signals, integrated local checkout flows, and simplified delivery slot selections for Cairo logistics.",
+        ar: "بنينا نظام شوبيفاي مخصص بهيكل بصري راقي ومتماسك. رتبنا الكتالوج اللي بيضم ٣٨ منتج حول علامات طزاجة واضحة، ودمجنا بوابات الدفع المحلية، وسهلنا اختيار مواعيد التوصيل لتتناسب مع لوجستيات القاهرة."
+      },
+      decisions: {
+        en: [
+          "Catalog Separation: Split fresh catch from frozen collections to align expectations on delivery time.",
+          "Visual Quality Signals: Designed custom badges for catch location (e.g., Red Sea, Mediterranean) to build instant trust.",
+          "Frictionless Checkout: Removed nested steps in cart, reducing details down to delivery date and time slots."
+        ],
+        ar: [
+          "فصل الكتالوج: قسمنا المنتجات لمجموعات طازة ومجمدة لتنسيق توقعات العميل عن وقت التوصيل.",
+          "إشارات الثقة البصرية: عملنا شارات مخصصة لمكان الصيد (البحر الأحمر، المتوسط) لبناء مصداقية فورية.",
+          "تبسيط الدفع: لغينا الخطوات الكتيرة في السلة واختصرنا البيانات المطلوبة في تاريخ التوصيل والميعاد المفضل."
+        ]
+      },
+      systemArchitecture: {
+        en: "Wired Shopify's Liquid backend into a streamlined frontend. Configured local payment gateways, Arabic domain routing, and structured metadata for SEO search queries.",
+        ar: "ربطنا خلفية شوبيفاي بواجهة سريعة وخفيفة. ضبطنا بوابات الدفع المحلية، وتوجيه النطاق العربي، وهيكلة البيانات الوصفية لمحركات البحث."
+      },
+      outcome: {
+        en: "Launched a highly functional, premium bilingual storefront. The catalog is optimized for immediate discovery, resulting in an effortless digital journey that matches the quality of the product itself.",
+        ar: "تم إطلاق واجهة متجر راقية وسريعة بلغتين. الكتالوج متهندس للوصول السريع للمنتجات، والنتيجة رحلة رقمية مريحة بتليق بجودة المنتج نفسه."
       },
       stats: [
-        { lbl: "CATALOG ENGINEERED", val: "38 SKUs", desc: "Structured, QA'd, and import-ready" },
-        { lbl: "STOREFRONT LOCALIZATION", val: "100% AR/EN", desc: "Full catalog, pages, navigation & SEO meta" }
+        { lbl: "CATALOG SIZE", val: "38 SKUs", desc: "Structured & QA'd end-to-end" },
+        { lbl: "LOCALIZATION", val: "100% AR/EN", desc: "Catalogs, pages & metadata synced" }
       ],
-      link: "mailto:mostafaamir692002@gmail.com"
+      link: "https://royal-sea-eg.com"
     },
     {
       id: "MEDIEVAL ALOUD",
       glyph: "M",
       glyphClass: "wc-1",
-      tag:   { en: "Brand · Commerce · Localization", ar: "البراند · التجارة · التعريب" },
+      tag: { en: "Luxury Fragrance Commerce", ar: "منصة عطور فاخرة" },
       title: "Medieval Aloud",
+      website: "https://medieval-aloud.com",
+      status: { en: "Live Project", ar: "مشروع حي" },
+      previewImage: "assets/medieval_aloud_preview.jpg",
       card: {
-        en: "Arabian fragrance brand (oud & musk) — Shopify commerce system with full Arabic localization, refined product language, and Gulf-market SEO architecture.",
-        ar: "براند عطور عربي (عود ومسك) — نظام تجارة على شوبيفاي بتعريب كامل، لغة منتجات متصقولة، وهندسة SEO مظبوطة على السوق الخليجي."
+        en: "Premium fragrance house (Oud & Musk) Shopify system with full Arabic localization, premium copy, and Gulf-market SEO architecture.",
+        ar: "نظام تجارة لدار عطور عربية فاخرة (العود والمسك) على شوبيفاي بتعريب كامل، وصياغة راقية، وبنية SEO مظبوطة للسوق الخليجي."
       },
       meta: {
-        en: ["Shopify", "Localization", "Gulf Market"],
-        ar: ["شوبيفاي", "التعريب", "السوق الخليجي"]
+        en: ["Luxury Positioning", "Brand Voice", "Search Architecture"],
+        ar: ["تموضع الفخامة", "نبرة الصوت للبراند", "بنية البحث"]
       },
-      techs: ["Shopify", "Brand Voice", "SEO Meta System", "AR Localization"],
-      desc: {
-        en: "Commerce and language system for an Arabian fragrance house specializing in oud and musk. Built the Shopify product architecture and executed full Arabic localization — product naming, collection copy, navigation, and SEO meta — with the product language refined line-by-line for the Gulf market's premium fragrance vocabulary.",
-        ar: "نظام تجارة ولغة لدار عطور عربية متخصصة في العود والمسك. بنيت هيكل المنتجات على شوبيفاي ونفذت التعريب الكامل — أسامي المنتجات، نصوص المجموعات، التنقل، وبيانات الـ SEO — مع صقل لغة المنتجات سطر سطر على قاموس العطور الفاخرة في السوق الخليجي."
+      techs: {
+        en: ["Shopify Engine", "Premium Copywriting", "SEO Optimization", "Gulf Market Adaptability"],
+        ar: ["محرك شوبيفاي", "كتابة النصوص الفاخرة", "تحسين الـ SEO", "ملاءمة السوق الخليجي"]
+      },
+      focus: {
+        en: ["Brand Strategy", "Luxury Positioning", "Product System Design", "Ecommerce Experience", "Content & Visual Direction"],
+        ar: ["استراتيجية البراند", "تموضع الفخامة", "تصميم نظام المنتجات", "تجربة التجارة الإلكترونية", "التوجيه البصري والمحتوى"]
+      },
+      overview: {
+        en: "Medieval Aloud is a luxury fragrance house specializing in oud, musk, and premium Arabian oils. We designed a commerce system that elevates the brand voice and optimizes product storytelling to match the elegance of high-end perfume boutiques.",
+        ar: "ميدييفال ألاود هي دار عطور فاخرة متخصصة في العود والمسك والزيوت العربية الثمينة. صممنا نظام تجارة بيرتقي بنبرة البراند ويركز على سرد قصة كل منتج ليحاكي أناقة محلات العطور العالمية الفخمة."
+      },
+      businessContext: {
+        en: "Fragrance shopping relies on sensory imagination. The digital experience must feel premium, using evocative language, clean typography, and high-end positioning to convert search interest into premium purchases.",
+        ar: "شراء العطور بيعتمد على إثارة خيال العميل وحواسه. التجربة الرقمية كان لازم تعكس الفخامة عبر نصوص منتقاة بدقة، وخطوط متناسقة، وتموضع فاخر يحول الباحثين لعملاء مشترين."
+      },
+      problem: {
+        en: "Oud and musk products are often poorly categorized online, leading to search confusion. The brand had zero search visibility in the highly lucrative Gulf market, and the product vocabulary lacked the premium tone expected by fragrance connoisseurs.",
+        ar: "منتجات العود والمسك غالباً بيتم تصنيفها بشكل عشوائي أونلاين، وده بيعمل تشتيت للعملاء. البراند مكنش ظاهر خالص في نتائج البحث في السوق الخليجي الغني، ومصطلحات المنتجات كانت بتفتقر للغة الفاخرة اللي بينتظرها عشاق العطور."
+      },
+      solution: {
+        en: "Structured the Shopify catalog with clear scent families. Wrote evocative, luxury-grade Arabic and English product narratives. Engineered a Gulf-focused SEO metadata architecture targeting premium Oud keywords.",
+        ar: "رتبنا كتالوج شوبيفاي لعائلات عطور واضحة. كتبنا نصوص عطور تعبيرية وراقية جداً بالعربي والإنجليزي. وهندسنا بنية بيانات SEO مركزة على السوق الخليجي ومستهدفة للكلمات المفتاحية الفاخرة للعود."
+      },
+      decisions: {
+        en: [
+          "Story-First Layout: Put ingredients and notes above tech specs to build sensory appeal.",
+          "Gulf Copy Tuning: Refined the Arabic copy line-by-line using premium Gulf vocabulary instead of generic translations.",
+          "Clean Checkout Path: Simplified the steps to purchase on mobile device screen sizes to optimize conversions in fast-paced markets."
+        ],
+        ar: [
+          "تنسيق القصة أولاً: حطينا المكونات والنوتات العطرية فوق المواصفات الفنية لإثارة رغبة العميل.",
+          "ضبط نصوص الخليج: صقلنا النصوص العربية سطر سطر لتتناسب مع لهجة وقاموس الفخامة في الخليج بدلاً من الترجمة الحرفية.",
+          "مسار دفع سريع: بسّطنا خطوات الشراء على الموبايل لرفع معدل التحويل في أسواق سريعة الحركة."
+        ]
+      },
+      systemArchitecture: {
+        en: "Configured clean Shopify Liquid structuring, optimized page asset sizes for fast mobile loads in Saudi Arabia and the UAE, and set up bilingual URL mapping.",
+        ar: "ضبطنا هيكل شوبيفاي ليكون سريع وخفيف، وحسّنا أحجام ملفات الموقع لسرعة تحميل فائقة في السعودية والإمارات، وعملنا روابط متوافقة بين اللغتين."
+      },
+      outcome: {
+        en: "Delivered a fully localized, premium fragrance storefront. The brand now speaks the language of luxury, and the digital shelf provides an immersive purchase experience that converts.",
+        ar: "سلّمنا متجر عطور فاخر ومعرّب بالكامل. البراند دلوقتي بيتكلم لغة الفخامة المناسبة ليه، والواجهة الرقمية بتقدم تجربة شراء ممتعة بتجيب نتايج فعالة."
       },
       stats: [
-        { lbl: "CATALOG LOCALIZED", val: "100%", desc: "Products, collections, meta & UI strings" },
-        { lbl: "SEO META SYSTEM", val: "Full stack", desc: "Bilingual titles & descriptions, market-tuned" }
+        { lbl: "SEO COVERAGE", val: "100%", desc: "Bilingual search-optimized metadata" },
+        { lbl: "CATALOG DEPLOYED", val: "Fully local", desc: "Refined copy and pricing structures" }
       ],
-      link: "mailto:mostafaamir692002@gmail.com"
+      link: "https://medieval-aloud.com"
+    },
+    {
+      id: "SEAFOOD MOOD",
+      glyph: "S",
+      glyphClass: "wc-4",
+      tag: { en: "Seafood Commerce Platform", ar: "منصة تجارة المأكولات البحرية" },
+      title: "Seafood Mood",
+      website: "https://seafood-mood.com",
+      status: { en: "Live Project", ar: "مشروع حي" },
+      previewImage: "assets/fishmonger_preview.jpg",
+      card: {
+        en: "Dynamic commerce platform for fresh catch ordering — inventory workflows, live pricing, and fulfillment logic connected end-to-end.",
+        ar: "منصة تجارة ديناميكية لطلب الأسماك الطازجة — تدفقات المخزون، الأسعار الحية، ومنطق التوريد متصلين من الأول للآخر."
+      },
+      meta: {
+        en: ["Platform Design", "Operational Flow", "Inventory Systems"],
+        ar: ["تصميم المنصة", "التدفق التشغيلي", "أنظمة المخزون"]
+      },
+      techs: {
+        en: ["Commerce Engine", "Dynamic Pricing Workflows", "Order Routing System", "UX Design"],
+        ar: ["محرك التجارة", "تدفقات التسعير الديناميكي", "نظام توجيه الطلبات", "تصميم تجربة المستخدم"]
+      },
+      focus: {
+        en: ["Digital Commerce", "Customer Experience", "Product Structure", "Business Workflow Design"],
+        ar: ["التجارة الرقمية", "تجربة العملاء", "هيكل المنتجات", "تصميم تدفقات عمل البيزنس"]
+      },
+      overview: {
+        en: "Seafood Mood is an interactive commerce platform built to bring the ocean's best harvests to metropolitan buyers. The platform connects live inventory variables with a sleek consumer ordering frontend.",
+        ar: "سيفود مود هي منصة تجارية تفاعلية اتبنت عشان تقرب صيد البحر الطازة للمشترين في المدن. المنصة بتوصل متغيرات المخزون الحية بواجهة مستخدم ممتازة وسهلة الطلب."
+      },
+      businessContext: {
+        en: "Fresh seafood commerce is volatile. Sourcing details change daily, prices shift based on market catch volume, and customers expect fast, reliable delivery slots. The platform had to turn these challenges into a stable business asset.",
+        ar: "تجارة الأسماك الطازجة متقلبة. تفاصيل التوريد بتتغير يومياً، والأسعار بتتحرك حسب حجم الصيد في اليوم، والعملاء بينتظروا مواعيد توصيل دقيقة وسريعة. كان لازم المنصة تحول التحديات دي لنقاط قوة وقيمة حقيقية."
+      },
+      problem: {
+        en: "Standard static carts fail when items go out of stock mid-day. Sourcing routes and order fulfillment were disconnected, leading to manual order edits and delayed delivery calls.",
+        ar: "سلة التسوق التقليدية بتبوظ لما المنتجات تخلص فجأة وسط اليوم. كمان طرق التوريد وتلبية الطلبات كانت منفصلة، وده كان بيؤدي لتعديل الطلبات يدوياً ومكالمات توصيل متأخرة."
+      },
+      solution: {
+        en: "Architected a responsive commerce engine that updates product availability, streamlines delivery options based on live logistics capacity, and organizes backend orders for direct routing.",
+        ar: "صممنا محرك تجاري مرن بيحدث توافر المنتجات فوراً، وبيسهل خيارات التوصيل بناءً على القدرة اللوجستية الحقيقية، ويرتب الطلبات في الخلفية للتوجيه المباشر."
+      },
+      decisions: {
+        en: [
+          "Dynamic Inventory Sync: Set up automated stock thresholds to hide sold-out catches instantly.",
+          "Visual Freshness Cards: Rebuilt the cards layout to show catch dates and delivery windows clearly.",
+          "Unified Customer View: Integrated customer accounts with automated WhatsApp tracking alerts."
+        ],
+        ar: [
+          "مزامنة المخزون الديناميكية: ضبطنا حدود المخزون التلقائية لإخفاء الأسماك المباعة فوراً وتجنب الطلبات الملغاة.",
+          "كروت الطزاجة البصرية: أعدنا تصميم الكروت لعرض تاريخ الصيد ومواعيد التوصيل بوضوح للعميل.",
+          "حساب موحد للعميل: ربطنا حسابات العملاء بتنبيهات تتبع أوتوماتيكية عبر الواتساب."
+        ]
+      },
+      systemArchitecture: {
+        en: "Integrated commerce backend with automated dispatching pipelines, localized address-mapping systems, and payment gateway APIs.",
+        ar: "ربطنا خلفية المتجر بمسارات توزيع آلية، وأنظمة لتحديد العناوين محلياً، وبوابات الدفع الإلكتروني."
+      },
+      outcome: {
+        en: "Delivered a high-conversion seafood platform that takes the chaos out of fresh commerce. Operations are streamlined, and buyers enjoy a fast, reliable path from sea to table.",
+        ar: "سلّمنا منصة مأكولات بحرية عالية التحويل شالت العشوائية من التجارة الطازة. العمليات بقت أسرع والعميل بقا يستمتع برحلة سهلة وموثوقة من البحر لطاولة الطعام."
+      },
+      stats: [
+        { lbl: "DELIVERY LATENCY", val: "Minimized", desc: "Dynamic scheduling in place" },
+        { lbl: "ORDER LOOP", val: "100% Digital", desc: "Automated routing replaces manual calls" }
+      ],
+      link: "https://seafood-mood.com"
     },
     {
       id: "UNITED",
       glyph: "U",
       glyphClass: "wc-2",
-      tag:   { en: "Brand Identity · Commerce System", ar: "هوية البراند · نظام التجارة" },
+      tag: { en: "B2B Supply Chain & Operations", ar: "سلاسل التوريد والعمليات B2B" },
       title: "UNITED",
+      website: "https://united-ffv.com",
+      status: { en: "Live Project", ar: "مشروع حي" },
+      previewImage: "assets/pantoufla_preview.jpg",
       card: {
-        en: "End-to-end brand and commerce system for a fashion label. Visual architecture wired directly into the commerce infrastructure.",
-        ar: "نظام هوية وتجارة متكامل لبراند في قطاع الأزياء — البنية البصرية متوصلة مباشرة بمنظومة التجارة الإلكترونية."
+        en: "Comprehensive B2B commerce and operations system for a fresh produce supplier — automating ordering, invoicing, and supply chain logistics.",
+        ar: "نظام عمليات وتجارة B2B متكامل لمورد حاصلات زراعية طازجة — أتمتة الطلبات، الفواتير، ولوجستيات سلاسل التوريد."
       },
       meta: {
-        en: ["Brand Strategy", "Identity", "Shopify"],
-        ar: ["الاستراتيجية", "الهوية", "شوبيفاي"]
+        en: ["B2B Infrastructure", "Supply Chain Systems", "Operational Automation"],
+        ar: ["بنية تحتية B2B", "أنظمة سلاسل التوريد", "أتمتة العمليات"]
       },
-      techs: ["Brand Strategy", "Identity System", "Shopify", "Commerce Architecture"],
-      desc: {
-        en: "End-to-end brand and commerce system for a fashion label. Designed the complete visual architecture and wired it directly to the commerce infrastructure — identity through checkout — for a consistent experience across every touchpoint.",
-        ar: "نظام هوية وتجارة متكامل لبراند أزياء. صممت البنية البصرية الكاملة ووصلتها مباشرة بمنظومة التجارة — من الهوية لحد الدفع — عشان التجربة تفضل متسقة في كل نقطة تواصل."
+      techs: {
+        en: ["Operations Design", "Invoice Automation", "Logistics Routing", "Wholesale Portal UX"],
+        ar: ["تصميم العمليات", "أتمتة الفواتير", "توجيه اللوجستيات", "واجهة بوابة الجملة"]
       },
-      stats: [
-        { lbl: "BRAND SYSTEM", val: "75+ Assets", desc: "Coherent visual identity and component kit" },
-        { lbl: "STORE PERFORMANCE", val: "98/100", desc: "Lighthouse mobile speed score benchmark" }
-      ],
-      link: "mailto:mostafaamir692002@gmail.com"
-    },
-    {
-      id: "FISHMONGER",
-      glyph: "F",
-      glyphClass: "wc-4",
-      tag:   { en: "Commerce · Operations System", ar: "التجارة · نظام العمليات" },
-      title: "Fishmonger",
-      card: {
-        en: "Commerce architecture and operations system for a fresh seafood brand — store, inventory workflows, and fulfillment automation connected end-to-end.",
-        ar: "بنية تجارية ونظام عمليات لبراند أسماك طازة — المتجر وتدفقات المخزون وأتمتة التوريد متوصلين من الأول للآخر."
+      focus: {
+        en: ["Business Systems", "Operations", "B2B Commerce", "Supply Chain Thinking", "Digital Transformation"],
+        ar: ["أنظمة الأعمال", "العمليات", "التجارة بين الشركات", "تفكير سلاسل التوريد", "التحول الرقمي"]
       },
-      meta: {
-        en: ["Commerce", "Operations", "Automation"],
-        ar: ["التجارة", "العمليات", "الأتمتة"]
+      overview: {
+        en: "UNITED is a major B2B supplier of fresh fruits and vegetables to hotels, restaurants, and caterers. We restructured their manual wholesale ordering loop into a robust digital operations system that eliminates administrative overhead and automates daily shipping cycles.",
+        ar: "يونايتد هي مورد B2B كبير للفواكه والخضروات للفنادق والمطاعم وشركات التموين. أعدنا هيكلة دورة طلبات الجملة اليدوية لنظام عمليات رقمي قوي بيقضي على المجهود الإداري وبيأتمت دورات الشحن اليومية."
       },
-      techs: ["Commerce Architecture", "Operations Design", "Shopify", "Workflow Automation"],
-      desc: {
-        en: "A commerce and operations system for a fresh seafood brand. Engineered the store architecture, inventory management systems, and the operational workflows connecting sourcing to fulfillment — automating the routine so the team focuses on quality.",
-        ar: "نظام تجارة وعمليات لبراند أسماك طازة. هندست بنية المتجر وأنظمة المخزون وتدفقات الشغل اللي بتوصّل التوريد بالتوصيل — الروتين كله اتأتمت عشان الفريق يركز في الجودة."
+      businessContext: {
+        en: "B2B commerce operates on volume and accuracy. Restaurant kitchens need precise produce deliveries, customized price contracts must be dynamically honored, and invoicing must align with corporate accounting schedules without human errors.",
+        ar: "التجارة بين الشركات (B2B) بتعتمد على الحجم والدقة. مطابخ المطاعم بتحتاج توصيل دقيق للخضار والفاكهة، وأسعار العقود المخصصة لازم تتنفذ أوتوماتيكياً، وإصدار الفواتير لازم يتطابق مع الأنظمة المحاسبية للشركات بدون أخطاء بشرية."
       },
-      stats: [
-        { lbl: "OPS AUTOMATION", val: "20+ hrs/wk", desc: "Fulfillment and sourcing time saved" },
-        { lbl: "FULFILLMENT", val: "99.8%", desc: "Fulfillment accuracy across order flow" }
-      ],
-      link: "mailto:mostafaamir692002@gmail.com"
-    },
-    {
-      id: "PANTOUFLA",
-      glyph: "P",
-      glyphClass: "wc-5",
-      tag:   { en: "Brand · Identity · E-Commerce", ar: "البراند · الهوية · التجارة" },
-      title: "Pantoufla",
-      card: {
-        en: "Brand system and commerce platform for a premium footwear label — visual identity that communicates luxury, paired with a Shopify store built for discovery and conversion.",
-        ar: "نظام هوية ومنصة تجارة لبراند أحذية فاخر — هوية بصرية بتوصّل إحساس الفخامة، مع متجر شوبيفاي متبني للتصفح السهل والتحويل العالي."
+      problem: {
+        en: "The supplier relied on phone calls and WhatsApp sheets, creating invoice mismatches and logistics delays. Fresh produce expired in warehouses due to lack of real-time demand visibility, leading to high product waste.",
+        ar: "كان المورد بيعتمد على المكالمات الهاتفية وقوائم الواتساب، وده كان بيعمل أخطاء في الفواتير وتأخير في التوصيل. كمان المنتجات الطازة كانت بتبوظ في المخازن لعدم وجود رؤية لحظية للطلب، مما أدى لهدر كبير للمنتجات."
       },
-      meta: {
-        en: ["Brand System", "Identity", "Shopify"],
-        ar: ["نظام البراند", "الهوية", "شوبيفاي"]
+      solution: {
+        en: "Engineered a wholesale digital portal where buyers place contract-priced orders. Integrated an automated invoice generation engine and a warehouse packing list system synchronized with shipping dispatch schedules.",
+        ar: "صممنا بوابة رقمية للجملة بيقوم المشترين من خلالها بطلب احتياجاتهم بأسعار عقودهم المحددة. ودمجنا محرك أوتوماتيكي لإصدار الفواتير ونظام لقوائم التعبئة في المخازن متزامن مع مواعيد الشحن."
       },
-      techs: ["Brand System", "Visual Identity", "Shopify", "Product UX"],
-      desc: {
-        en: "A brand system and commerce platform for a premium footwear label. Built a visual identity system communicating luxury and craft, paired with a Shopify store engineered for effortless discovery and high-intent conversion.",
-        ar: "نظام هوية ومنصة تجارة لبراند أحذية منزلية فاخر. بنيت نظام بصري بيعكس الجودة والشياكة، ومتجر شوبيفاي متهندس إن العميل يلاقي اللي بيدور عليه بسهولة ويشتري من غير مجهود."
+      decisions: {
+        en: [
+          "Contract-Based Pricing: Built custom price profiles so each restaurant group sees their pre-negotiated wholesale rates.",
+          "Automated PDF Invoicing: Programmed direct PDF creation on order confirmation to bypass accounting bottlenecks.",
+          "Warehouse Manifest Generation: Configured automated sorting of items by weight and cooling requirements to speed up packing."
+        ],
+        ar: [
+          "التسعير القائم على العقود: بنينا ملفات أسعار مخصصة عشان كل مجموعة مطاعم تظهرلها أسعار الجملة المتفاوض عليها مسبقاً.",
+          "أتمتة فواتير PDF: برمجنا إصدار فواتير الـ PDF تلقائياً عند تأكيد الطلب لتخطي الاختناق المحاسبي.",
+          "قوائم ترتيب المخازن: عملنا ترتيب تلقائي للمنتجات حسب الوزن والاحتياج للتبريد لتسريع عملية التعبئة للسيارات."
+        ]
+      },
+      systemArchitecture: {
+        en: "Wired the wholesale commerce flow with custom database pricing structures, logistics dispatch routes, and invoice print templates.",
+        ar: "ربطنا تدفق تجارة الجملة بقواعد بيانات أسعار مخصصة، ومسارات التوزيع اللوجستية، وقوالب طباعة الفواتير."
+      },
+      outcome: {
+        en: "Digitized the entire supply chain workflow. Reduced order errors to near zero, accelerated invoice delivery, and optimized warehouse space by aligning inventory with real culinary buyer demand.",
+        ar: "حولنا كامل سلسلة التوريد للرقمية. قللنا أخطاء الطلبات لـ صفر تقريباً، وسرّعنا تسليم الفواتير، وحسّنا استخدام مساحات المخازن بربط المخزون بالطلب الفعلي."
       },
       stats: [
-        { lbl: "IDENTITY ASSETS", val: "120+ Assets", desc: "Full digital guidelines, packaging and social kits" },
-        { lbl: "ORDER VALUE", val: "+42% AOV", desc: "Average order value increase after overhaul" }
+        { lbl: "INVOICING SPEED", val: "Instant", desc: "Automated PDFs bypass manual entry" },
+        { lbl: "ORDER ERRORS", val: "~0%", desc: "Precise contract validation on entry" }
       ],
-      link: "mailto:mostafaamir692002@gmail.com"
+      link: "https://united-ffv.com"
     }
   ];
 

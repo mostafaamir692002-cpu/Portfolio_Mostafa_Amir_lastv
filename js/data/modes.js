@@ -1,6 +1,6 @@
 /* ============================================================
-   DATA · DISCIPLINES (operating modes) — bilingual copy + meters
-   Arabic register: refined Egyptian colloquial (عامية بيضاء).
+   DATA · DISCIPLINES (operating modes) — Product Builder focus.
+   Bilingual english and Arabic (Egyptian colloquial refined).
    ============================================================ */
 (function (MOS) {
   "use strict";
@@ -8,30 +8,40 @@
   MOS.data = MOS.data || {};
 
   MOS.data.MODES = [
-    { t: "Brand Architecture & Identity",
-      arT: "هندسة وتصميم الهوية التجارية",
-      d: "I build brand systems that function like software — modular, scalable, and consistent across every touchpoint. Strategy, identity, and tone as a unified design system.",
-      ar: "ببني أنظمة هوية شغّالة زي السوفتوير — قابلة للتوسع، متناسقة، وبتغطي كل نقطة تواصل. الاستراتيجية والهوية والأسلوب كلهم نظام تصميم واحد.",
-      m: [["Brand Strategy", 92], ["Identity Systems", 95], ["Visual Language", 90]] },
-    { t: "Shopify Commerce Infrastructure",
-      arT: "البنية التحتية لتجارة شوبيفاي",
-      d: "End-to-end commerce architecture: Liquid themes, checkout flows, product systems, and storefront performance. Every store is a revenue engine, not a template.",
-      ar: "هندسة تجارة إلكترونية من الأول للآخر: قوالب Liquid، مسارات الدفع، أنظمة المنتجات، وأداء الواجهة. كل متجر عندي محرك إيرادات، مش مجرد قالب جاهز.",
-      m: [["Shopify Architecture", 94], ["Commerce UX", 91], ["Performance", 92]] },
-    { t: "Business Operations & Workflows",
-      arT: "عمليات وتدفقات تشغيل الشركات",
-      d: "I map, restructure, and automate the operational backbone of a business — from fulfillment logic to team workflows to reporting pipelines.",
-      ar: "برسم وأعيد هيكلة وأأتمت العمود الفقري التشغيلي للبيزنس — من منطق التنفيذ لتدفقات شغل الفريق لمسارات التقارير.",
-      m: [["Operations Design", 88], ["Workflow Systems", 90], ["Process Logic", 86]] },
-    { t: "AI-Powered Automation",
-      arT: "أتمتة العمليات بالذكاء الاصطناعي",
-      d: "Custom AI agents and workflow engines that eliminate repetitive operations. Integrations that make your systems talk to each other without manual handoffs.",
-      ar: "وكلاء ذكاء اصطناعي ومحركات شغل مخصوصة بتشيل العمليات المتكررة من على كتفك. تكاملات بتخلي أنظمتك تكلم بعضها من غير تدخل يدوي.",
-      m: [["AI Agents", 90], ["Automation Flows", 94], ["Integration", 88]] },
-    { t: "Business Strategy & Positioning",
-      arT: "تموضع واستراتيجية الأعمال",
-      d: "Positioning, pricing architecture, and go-to-market systems. The thinking that makes the brand and the product coherent before a single pixel is designed.",
-      ar: "التموضع، هيكلة التسعير، وأنظمة النزول للسوق. التفكير اللي بيخلي البراند والمنتج متماسكين قبل ما بكسل واحد يتصمم.",
-      m: [["Positioning", 92], ["Market Strategy", 88], ["Systems Thinking", 94]] }
+    {
+      t: "Product Strategy & Positioning",
+      arT: "استراتيجية وتموضع المنتجات",
+      d: "I define the product vision, pricing architecture, and customer positioning before a single pixel is designed. Aligning business objectives with actual market demand to create viable products.",
+      ar: "بحدد رؤية المنتج، هيكل التسعير، وتموضع العميل قبل رسم بكسل واحد. مواءمة أهداف البيزنس مع طلب السوق الحقيقي لخلق منتجات ناجحة ولها قيمة.",
+      m: [["Market Discovery", 92], ["Pricing Architecture", 88], ["Product Thinking", 95]]
+    },
+    {
+      t: "Commerce Architecture",
+      arT: "هندسة منصات التجارة",
+      d: "Designing end-to-end commerce structures that optimize product discovery and checkout flows. Structuring product databases, cart rules, and payment integrations to drive revenue.",
+      ar: "تصميم بنية التجارة بالكامل لتحسين تصفح المنتجات ومسار الدفع. تنظيم قواعد بيانات المنتجات، شروط السلة، وتكامل المدفوعات لزيادة الأرباح.",
+      m: [["Catalog Design", 94], ["Conversion UX", 91], ["Payment Flow", 90]]
+    },
+    {
+      t: "Business Workflows & Logistics",
+      arT: "تدفقات العمل واللوجستيات",
+      d: "Mapping, auditing, and optimizing the operational processes behind a product. Restructuring warehouse dispatch, courier handoffs, and customer tracking cycles.",
+      ar: "رسم ومراجعة وتحسين العمليات التشغيلية اللي ورا المنتج. إعادة هيكلة توزيع المخازن، تسليم المناديب، ودورات تتبع العميل للطلبات.",
+      m: [["Workflow Design", 90], ["Fulfillment Logic", 92], ["Operational Audit", 86]]
+    },
+    {
+      t: "Integrations & Automation",
+      arT: "التكامل وأتمتة النظم",
+      d: "Connecting separate business tools, databases, and APIs. Building custom server scripts and automated message pipelines that eliminate administrative overhead.",
+      ar: "ربط أدوات العمل المنفصلة، وقواعد البيانات، والـ APIs ببعضها. بناء سكربتات خوادم مخصصة ومسارات رسائل تلقائية بتلغي المجهود الإداري اليدوي.",
+      m: [["API Integrations", 92], ["Task Automation", 95], ["Data Synchronization", 88]]
+    },
+    {
+      t: "Brand Systems & Identity",
+      arT: "أنظمة وهوية العلامة التجارية",
+      d: "Structuring visual assets and design systems that scale. Creating clear style guidelines and components that ensure brand consistency across packaging, print, and web.",
+      ar: "بناء الأنظمة البصرية وأدلة التصميم للتوسع السلس. خلق أدلة أسلوب ومكونات واضحة تضمن اتساق البراند في التعبئة والتغليف، المطبوعات، والويب.",
+      m: [["Visual Systems", 90], ["Brand Consistency", 93], ["Packaging Design", 85]]
+    }
   ];
 })(window.MOS = window.MOS || {});

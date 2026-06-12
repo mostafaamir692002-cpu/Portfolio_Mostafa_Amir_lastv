@@ -12,16 +12,23 @@
     var dotsWrap = MOS.$("#workDots");
     if (!track) return;
 
-    /* ---- render cards from data ---- */
     track.innerHTML = MOS.data.PROJECTS.map(function (p) {
       function metas(list) {
         return list.map(function (m) { return "<span>" + m + "</span>"; }).join("");
       }
       return '<article class="work-card" data-project="' + p.id + '">' +
-        '<div class="wc-vis ' + p.glyphClass + '"><span class="glyph chrome-text">' + p.glyph + '</span></div>' +
+        '<div class="wc-vis" style="position:relative;overflow:hidden;height:180px;display:grid;place-items:center;">' +
+          '<img src="' + p.previewImage + '" alt="' + p.title + '" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0;opacity:0.8;">' +
+          '<span class="glyph chrome-text" style="position:relative;z-index:2;font-size:32px;font-weight:900;background:rgba(8,8,12,0.65);border:1px solid rgba(255,255,255,0.1);width:54px;height:54px;border-radius:50%;display:grid;place-items:center;">' + p.glyph + '</span>' +
+        '</div>' +
         '<div class="wc-body">' +
-          '<div class="tag"><span class="lang-en">' + p.tag.en + '</span><span class="lang-ar">' + p.tag.ar + '</span></div>' +
-          '<h3>' + p.id + '</h3>' +
+          '<div class="tag" style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:4px;">' +
+            '<div><span class="lang-en">' + p.tag.en + '</span><span class="lang-ar">' + p.tag.ar + '</span></div>' +
+            '<span class="project-status-badge" style="font-size:8.5px;padding:2.5px 8px;margin-bottom:0;display:inline-block;border-radius:10px;">LIVE</span>' +
+          '</div>' +
+          '<h3 style="display:flex;flex-direction:column;gap:2px;margin-top:6px;">' + p.title + 
+            '<span class="project-url-display" style="font-size:10px;margin-top:2px;font-weight:normal;">' + p.website.replace('https://', '') + '</span>' +
+          '</h3>' +
           '<p class="lang-en">' + p.card.en + '</p>' +
           '<p class="lang-ar" style="font-family:\'Noto Sans Arabic\';direction:rtl;text-align:right;">' + p.card.ar + '</p>' +
           '<div class="wc-meta lang-en">' + metas(p.meta.en) + '</div>' +

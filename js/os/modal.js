@@ -51,35 +51,63 @@
     });
 
     var techsSpans = "";
-    data.techs.forEach(function (t) { techsSpans += "<span>" + t + "</span>"; });
+    var techsList = isAr && data.techs.ar ? data.techs.ar : data.techs.en;
+    techsList.forEach(function (t) { techsSpans += "<span>" + t + "</span>"; });
+
+    var decisionsListHtml = "";
+    var decList = isAr && data.decisions.ar ? data.decisions.ar : data.decisions.en;
+    decList.forEach(function (d) {
+      var parts = d.split(":");
+      var title = parts[0];
+      var desc = parts.slice(1).join(":");
+      decisionsListHtml += '<li><b>' + title + '</b>' + desc + '</li>';
+    });
 
     var backBtnText = isAr ? "ارجع للنظام" : "Back to System";
-    var launchBtnText = isAr ? "افتح المشروع" : "Launch Project";
+    var launchBtnText = isAr ? "زيارة الموقع الإلكتروني" : "Visit Live Website";
     var metricsTitle = isAr ? "// النتايج بالأرقام" : "// IMPACT METRICS";
     var tag = isAr ? data.tag.ar : data.tag.en;
 
-    body.innerHTML = '<div class="modal-header-hero">' +
+    body.innerHTML = '<div class="modal-case-hero">' +
+      '<img src="' + data.previewImage + '" alt="' + data.title + ' website mockup" class="modal-preview-img" loading="lazy">' +
+    '</div>' +
+    '<div class="modal-header-hero">' +
       '<div class="modal-hero-glyph ' + data.glyphClass + '">' +
         '<span class="glyph chrome-text" style="font-size:74px;font-weight:900;font-family:\'Archivo\'">' + data.glyph + '</span>' +
       '</div>' +
       '<div class="modal-header-info">' +
-        '<div class="tag">' + tag + '</div>' +
+        '<div class="project-status-badge">' + (isAr ? data.status.ar : data.status.en) + '</div>' +
         '<h2>' + data.title + '</h2>' +
-        '<div class="techs">' + techsSpans + '</div>' +
+        '<div class="tag">' + tag + '</div>' +
+        '<a href="' + data.website + '" class="project-url-display" target="_blank" rel="noopener noreferrer">' + data.website.replace('https://', '') + '</a>' +
+        '<div class="techs" style="margin-top:10px;">' + techsSpans + '</div>' +
       '</div>' +
     '</div>' +
     '<div class="modal-desc-grid">' +
       '<div class="modal-desc-col">' +
-        (isAr ? '<div class="ar" style="margin-bottom:0">' + data.desc.ar + '</div>' : '<p style="margin-bottom:0">' + data.desc.en + '</p>') +
+        '<div class="modal-section-title">' + (isAr ? "نظرة عامة على المشروع" : "1. Project Overview") + '</div>' +
+        '<p>' + (isAr ? data.overview.ar : data.overview.en) + '</p>' +
+        '<div class="modal-section-title">' + (isAr ? "سياق العمل التجاري" : "2. Business Context") + '</div>' +
+        '<p>' + (isAr ? data.businessContext.ar : data.businessContext.en) + '</p>' +
+        '<div class="modal-section-title">' + (isAr ? "المشكلة والاحتياج" : "3. The Problem") + '</div>' +
+        '<p>' + (isAr ? data.problem.ar : data.problem.en) + '</p>' +
+        '<div class="modal-section-title">' + (isAr ? "الحل ومخرجات المنتج" : "4. The Solution") + '</div>' +
+        '<p>' + (isAr ? data.solution.ar : data.solution.en) + '</p>' +
+        '<div class="modal-section-title">' + (isAr ? "هندسة العمليات وتدفق العمل" : "5. Workflow & Systems Design") + '</div>' +
+        '<p>' + (isAr ? data.systemArchitecture.ar : data.systemArchitecture.en) + '</p>' +
       '</div>' +
       '<div class="modal-stats-col">' +
-        '<div><span style="font-family:\'JetBrains Mono\';font-size:11px;color:var(--blue-soft)">' + metricsTitle + '</span></div>' +
+        '<div class="modal-section-title">' + (isAr ? "القرارات الرئيسية للمنتج" : "Key Decisions") + '</div>' +
+        '<ul class="modal-decision-list">' + decisionsListHtml + '</ul>' +
+        '<div class="modal-section-title">' + (isAr ? "النتائج والأثر الملموس" : "Outcome & Impact") + '</div>' +
+        '<p>' + (isAr ? data.outcome.ar : data.outcome.en) + '</p>' +
+        '<div style="margin-top: 15px;"><span style="font-family:\'JetBrains Mono\';font-size:11px;color:var(--blue-soft)">' + metricsTitle + '</span></div>' +
         statBoxes +
       '</div>' +
     '</div>' +
     '<div class="modal-footer">' +
       '<button class="modal-btn secondary" id="modalBackBtn">' + backBtnText + '</button>' +
-      '<a href="' + data.link + '" class="modal-btn primary" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:6px;">' +
+      '<a href="' + data.website + '" class="modal-btn primary" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:6px;">' +
         '<span>' + launchBtnText + '</span>' +
         '<svg class="btn-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>' +
       '</a>' +
