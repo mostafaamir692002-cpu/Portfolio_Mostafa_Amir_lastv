@@ -51,7 +51,8 @@
     });
 
     var techsSpans = "";
-    var techsList = isAr && data.techs.ar ? data.techs.ar : data.techs.en;
+    var focusSource = data.focusTags || data.techs;
+    var techsList = isAr && focusSource.ar ? focusSource.ar : focusSource.en;
     techsList.forEach(function (t) { techsSpans += "<span>" + t + "</span>"; });
 
     var decisionsListHtml = "";
@@ -80,7 +81,8 @@
         '<h2>' + data.title + '</h2>' +
         '<div class="tag">' + tag + '</div>' +
         '<a href="' + data.website + '" class="project-url-display" target="_blank" rel="noopener noreferrer">' + data.website.replace('https://', '') + '</a>' +
-        '<div class="techs" style="margin-top:10px;">' + techsSpans + '</div>' +
+        '<div class="modal-focus-label" style="margin-top:14px;font-family:\'JetBrains Mono\';font-size:9px;color:var(--blue-soft);letter-spacing:.14em;text-transform:uppercase;margin-bottom:6px;">' + (isAr ? "محاور المشروع" : "FOCUS AREAS") + '</div>' +
+        '<div class="techs" style="margin-top:0;">' + techsSpans + '</div>' +
       '</div>' +
     '</div>' +
     '<div class="modal-desc-grid">' +
@@ -109,7 +111,7 @@
       '<button class="modal-btn secondary" id="modalBackBtn">' + backBtnText + '</button>' +
       '<a href="' + data.website + '" class="modal-btn primary" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:6px;">' +
         '<span>' + launchBtnText + '</span>' +
-        '<svg class="btn-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>' +
+        '<svg class="btn-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M7 7h10v10"/></svg>' +
       '</a>' +
     '</div>';
 

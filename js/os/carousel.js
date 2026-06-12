@@ -13,33 +13,86 @@
     if (!track) return;
 
     track.innerHTML = MOS.data.PROJECTS.map(function (p) {
-      function metas(list) {
-        return list.map(function (m) { return "<span>" + m + "</span>"; }).join("");
+      function focusTags(list) {
+        return list.slice(0, 3).map(function (m) { return "<span>" + m + "</span>"; }).join("");
       }
+      var problemEn = p.problem_short ? p.problem_short.en : p.card.en;
+      var problemAr = p.problem_short ? p.problem_short.ar : p.card.ar;
+      var outcomeEn = p.outcome_short ? p.outcome_short.en : "";
+      var outcomeAr = p.outcome_short ? p.outcome_short.ar : "";
+
       return '<article class="work-card" data-project="' + p.id + '">' +
-        '<div class="wc-vis" style="position:relative;overflow:hidden;height:180px;display:grid;place-items:center;">' +
-          '<img src="' + p.previewImage + '" alt="' + p.title + '" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0;opacity:0.8;">' +
-          '<span class="glyph chrome-text" style="position:relative;z-index:2;font-size:32px;font-weight:900;background:rgba(8,8,12,0.65);border:1px solid rgba(255,255,255,0.1);width:54px;height:54px;border-radius:50%;display:grid;place-items:center;">' + p.glyph + '</span>' +
-        '</div>' +
-        '<div class="wc-body">' +
-          '<div class="tag" style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:4px;">' +
-            '<div><span class="lang-en">' + p.tag.en + '</span><span class="lang-ar">' + p.tag.ar + '</span></div>' +
-            '<span class="project-status-badge" style="font-size:8.5px;padding:2.5px 8px;margin-bottom:0;display:inline-block;border-radius:10px;">LIVE</span>' +
+        '<div class="wc-vis" style="position:relative;overflow:hidden;height:200px;">' +
+          '<img src="' + p.previewImage + '" alt="' + p.title + '" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0;opacity:0.75;transition:opacity .4s,transform .6s;">' +
+          '<div style="position:absolute;inset:0;background:linear-gradient(to bottom,rgba(0,0,0,0.15) 0%,rgba(0,0,0,0.55) 100%);"></div>' +
+          '<div style="position:absolute;top:12px;left:14px;right:14px;display:flex;justify-content:space-between;align-items:center;">' +
+            '<span class="project-status-badge" style="font-size:8.5px;padding:3px 9px;border-radius:10px;letter-spacing:.12em;">● LIVE</span>' +
+            '<span style="font-family:\'JetBrains Mono\';font-size:9px;color:rgba(255,255,255,.55);letter-spacing:.1em;">' + p.website.replace('https://', '') + '</span>' +
           '</div>' +
-          '<h3 style="display:flex;flex-direction:column;gap:2px;margin-top:6px;">' + p.title + 
-            '<span class="project-url-display" style="font-size:10px;margin-top:2px;font-weight:normal;">' + p.website.replace('https://', '') + '</span>' +
-          '</h3>' +
-          '<p class="lang-en">' + p.card.en + '</p>' +
-          '<p class="lang-ar" style="font-family:\'Noto Sans Arabic\';direction:rtl;text-align:right;">' + p.card.ar + '</p>' +
-          '<div class="wc-meta lang-en">' + metas(p.meta.en) + '</div>' +
-          '<div class="wc-meta lang-ar">' + metas(p.meta.ar) + '</div>' +
+          '<div style="position:absolute;bottom:14px;left:14px;">' +
+            '<div style="font-family:\'JetBrains Mono\';font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.6);margin-bottom:4px;">' +
+              '<span class="lang-en">' + p.tag.en + '</span>' +
+              '<span class="lang-ar" style="font-family:\'Noto Sans Arabic\';">' + p.tag.ar + '</span>' +
+            '</div>' +
+            '<h3 style="font-family:\'Archivo\';font-weight:900;font-size:22px;color:#fff;letter-spacing:-.01em;line-height:1;margin:0;">' + p.title + '</h3>' +
+          '</div>' +
+        '</div>' +
+        '<div class="wc-body" style="padding:18px 20px 20px;">' +
+          '<div class="wc-case-row">' +
+            '<span class="wc-case-label lang-en">Problem</span>' +
+            '<span class="wc-case-label lang-ar">المشكلة</span>' +
+            '<p class="wc-case-text lang-en">' + problemEn + '</p>' +
+            '<p class="wc-case-text lang-ar" style="font-family:\'Noto Sans Arabic\';direction:rtl;text-align:right;">' + problemAr + '</p>' +
+          '</div>' +
+          (outcomeEn ? '<div class="wc-case-row wc-outcome-row">' +
+            '<span class="wc-case-label wc-outcome-label lang-en">Outcome</span>' +
+            '<span class="wc-case-label wc-outcome-label lang-ar">النتيجة</span>' +
+            '<p class="wc-case-text wc-outcome-text lang-en">' + outcomeEn + '</p>' +
+            '<p class="wc-case-text wc-outcome-text lang-ar" style="font-family:\'Noto Sans Arabic\';direction:rtl;text-align:right;">' + outcomeAr + '</p>' +
+          '</div>' : '') +
+          '<div class="wc-meta lang-en">' + focusTags(p.focusTags ? p.focusTags.en : p.meta.en) + '</div>' +
+          '<div class="wc-meta lang-ar">' + focusTags(p.focusTags ? p.focusTags.ar : p.meta.ar) + '</div>' +
+          '<div class="wc-actions">' +
+            '<a class="wc-btn-primary" href="' + p.website + '" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation();">' +
+              '<span class="lang-en">Visit Website</span>' +
+              '<span class="lang-ar">زيارة الموقع</span>' +
+              '<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0"><path d="M7 17L17 7M7 7h10v10"/></svg>' +
+            '</a>' +
+            '<button class="wc-btn-secondary wc-open-case">' +
+              '<span class="lang-en">Case Study</span>' +
+              '<span class="lang-ar">دراسة الحالة</span>' +
+              '<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0"><path d="M5 12h14M12 5l7 7-7 7"/></svg>' +
+            '</button>' +
+          '</div>' +
         '</div>' +
       '</article>';
     }).join("");
 
-    /* open project modal on click */
+    /* open project modal on case study click or card click */
     MOS.$$(".work-card", track).forEach(function (card) {
-      card.addEventListener("click", function () {
+      /* Visit Website — explicit navigation to survive pointer-capture routing */
+      var visitBtn = card.querySelector(".wc-btn-primary");
+      if (visitBtn) {
+        visitBtn.addEventListener("click", function (e) {
+          e.stopPropagation();
+          e.preventDefault();
+          var url = visitBtn.getAttribute("href");
+          if (url && url !== "#") window.open(url, "_blank", "noopener,noreferrer");
+        });
+        visitBtn.addEventListener("pointerup", function (e) {
+          e.stopPropagation();
+        });
+      }
+
+      var openBtn = card.querySelector(".wc-open-case");
+      if (openBtn) {
+        openBtn.addEventListener("click", function (e) {
+          e.stopPropagation();
+          MOS.modal.openProject(card.getAttribute("data-project"));
+        });
+      }
+      card.addEventListener("click", function (e) {
+        if (e.target.closest("a") || e.target.closest(".wc-btn-primary")) return;
         MOS.modal.openProject(card.getAttribute("data-project"));
       });
     });
@@ -94,12 +147,14 @@
       }, 200);
     });
 
-    /* ---- pointer drag (the CSS promised grab — now it delivers) ---- */
+    /* ---- pointer drag ---- */
     var wrap = MOS.$(".work-track-wrap");
     if (wrap && window.PointerEvent) {
       var dragging = false, startX = 0, delta = 0, baseOffset = 0;
       wrap.addEventListener("pointerdown", function (e) {
         if (e.pointerType === "mouse" && e.button !== 0) return;
+        /* don't hijack clicks on action buttons */
+        if (e.target.closest(".wc-btn-primary") || e.target.closest(".wc-open-case") || e.target.closest("a") || e.target.closest("button")) return;
         dragging = true; startX = e.clientX; delta = 0;
         baseOffset = -idx * step();
         wrap.setPointerCapture(e.pointerId);

@@ -8,6 +8,8 @@
 <meta property="og:title" content="Mostafa Amir — Product Builder" />
 <meta property="og:description" content="Connecting product strategy, business logic, systems design, and execution to launch real products and commerce systems." />
 <meta property="og:type" content="website" />
+<meta property="og:image" content="assets/mostafa-amir.jpg" />
+<meta property="og:url" content="https://mostafaamir.com" />
 
 <!-- perf: early connections for fonts + CDN libs -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -29,6 +31,7 @@
 <link rel="stylesheet" href="css/wireframe.css">
 <link rel="stylesheet" href="css/rtl.css">
 <link rel="stylesheet" href="css/responsive.css">
+<link rel="stylesheet" href="css/enhancements.css">
 </head>
 <body>
 
@@ -42,7 +45,7 @@
 
 <!-- BOOT — space forms behind this overlay -->
 <div id="boot">
-  <div class="boot-mark"><span class="chrome-text">MA</span></div>
+  <div class="boot-mark"><img src="assets/mostafa-amir.jpg" alt="Mostafa Amir" width="88" height="88" style="width:100%;height:100%;object-fit:cover;border-radius:22px;" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"><span class="chrome-text" style="display:none">MA</span></div>
   <div class="boot-label">Initializing System</div>
   <div class="boot-bar"><i></i></div>
   <div class="boot-pct">0%</div>
@@ -79,7 +82,7 @@
   <div class="dock-links">
     <a href="#work"><span class="lang-en">Work</span><span class="lang-ar">أعمالي</span></a>
     <a href="#about"><span class="lang-en">About</span><span class="lang-ar">عني</span></a>
-    <a href="#systems"><span class="lang-en">Systems</span><span class="lang-ar">الأنظمة</span></a>
+    <a href="#systems"><span class="lang-en">Approach</span><span class="lang-ar">المنهجية</span></a>
     <a href="#modes"><span class="lang-en">Disciplines</span><span class="lang-ar">التخصصات</span></a>
   </div>
   <div style="display:flex;align-items:center;gap:12px;">
@@ -109,7 +112,7 @@
     <div class="hero-window" data-reveal data-parallax-root>
       <div class="win-chrome">
         <div class="win-dots"><i></i><i></i><i></i></div>
-        <div class="win-pill">systems.architect · live</div>
+        <div class="win-pill">product.builder · live</div>
         <div class="win-tools"><span></span><span></span><span></span></div>
       </div>
 
@@ -132,17 +135,17 @@
               <div class="row"><svg width="15" height="15" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"/><path d="M12 7v5l3 2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg> <span class="lang-en">Available for select work</span><span class="lang-ar">متاح لشغل مختار</span></div>
             </div>
             <div class="socials">
-              <a class="metal" href="mailto:mostafaamir692002@gmail.com" aria-label="Email" title="Email">
+              <a class="metal" href="mailto:mostafaamir692002@gmail.com" aria-label="Email" title="Email" target="_blank" rel="noopener">
                 <svg width="17" height="17" viewBox="0 0 24 24" fill="none"><rect x="3" y="5" width="18" height="14" rx="2.5" stroke="currentColor" stroke-width="1.6"/><path d="m4 7 8 6 8-6" stroke="currentColor" stroke-width="1.6"/></svg>
               </a>
-              <a class="metal" href="#work" aria-label="Work" title="Work">
-                <svg width="17" height="17" viewBox="0 0 24 24" fill="none"><path d="M4 7h6M4 12h7M4 17h7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><circle cx="18" cy="14" r="3.2" stroke="currentColor" stroke-width="1.6"/></svg>
-              </a>
-              <a class="metal" href="#contact" aria-label="LinkedIn" title="Connect">
+              <a class="metal" href="https://www.linkedin.com/in/mostafa-amir-767772346/" aria-label="LinkedIn" title="LinkedIn" target="_blank" rel="noopener noreferrer">
                 <svg width="17" height="17" viewBox="0 0 24 24" fill="none"><rect x="4" y="4" width="16" height="16" rx="3" stroke="currentColor" stroke-width="1.6"/><path d="M8 10v6M8 7.5v.01M12 16v-3a2 2 0 0 1 4 0v3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
               </a>
-              <a class="metal" href="#contact" aria-label="X" title="X">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 5l14 14M19 5 5 19" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+              <a class="metal" href="https://www.instagram.com/mosstafa_amir/" aria-label="Instagram" title="Instagram" target="_blank" rel="noopener noreferrer">
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.5"/><circle cx="17" cy="7" r="1" fill="currentColor"/></svg>
+              </a>
+              <a class="metal" href="https://www.facebook.com/mostafa.amir.60122/" aria-label="Facebook" title="Facebook" target="_blank" rel="noopener noreferrer">
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="none"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
               </a>
             </div>
           </div>
@@ -163,22 +166,8 @@
               <button class="toggle on" data-c="design" aria-pressed="true" aria-label="Toggle Wireframe Design Mode">
                 <span class="ico"><svg width="17" height="17" viewBox="0 0 24 24" fill="none"><path d="M6 2h12l4 10-10 10L2 12Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><circle cx="12" cy="12" r="2.5" stroke="currentColor" stroke-width="1.5"/></svg></span>
                 <span>
-                  <span class="lbl"><span class="lang-en">Commerce Ops</span><span class="lang-ar">عمليات التجارة</span></span><br>
+                  <span class="lbl"><span class="lang-en">Blueprint</span><span class="lang-ar">المخطط</span></span><br>
                   <span class="st"><span class="lang-en">Active</span><span class="lang-ar">شغّال</span></span>
-                </span>
-              </button>
-              <button class="toggle on" data-c="auto" aria-pressed="true" aria-label="Toggle Automation System Log overlay">
-                <span class="ico"><svg width="17" height="17" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="1.5"/><path d="M12 2v3m0 14v3m10-10h-3M5 12H2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><path d="m18 6-2 2M8 16l-2 2m12 0-2-2M8 8 6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></span>
-                <span>
-                  <span class="lbl"><span class="lang-en">AI Automation</span><span class="lang-ar">أتمتة الذكاء</span></span><br>
-                  <span class="st"><span class="lang-en">Active</span><span class="lang-ar">شغّال</span></span>
-                </span>
-              </button>
-              <button class="toggle" data-c="sys" aria-pressed="false" aria-label="Toggle Core Diagnostics Modal">
-                <span class="ico"><svg width="17" height="17" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="7" height="7" rx="1.5" stroke="currentColor" stroke-width="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5" stroke="currentColor" stroke-width="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5" stroke="currentColor" stroke-width="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5" stroke="currentColor" stroke-width="1.5"/></svg></span>
-                <span>
-                  <span class="lbl"><span class="lang-en">Architecture</span><span class="lang-ar">هندسة النظام</span></span><br>
-                  <span class="st"><span class="lang-en">Standby</span><span class="lang-ar">استعداد</span></span>
                 </span>
               </button>
             </div>
@@ -188,8 +177,8 @@
         <!-- CENTER CORE -->
         <div class="hero-core" data-px="0.15">
           <div class="hero-eyebrow">
-            <span class="lang-en">// Product Builder · Brand & Commerce Architect</span>
-            <span class="lang-ar">// صانع منتجات · تصميم الأنظمة والهويات</span>
+            <span class="lang-en">// Product Builder · Brand & Commerce Systems</span>
+            <span class="lang-ar">// صانع منتجات · أنظمة البراند والتجارة</span>
           </div>
           <div class="monogram-disc" data-px="0.7"><span class="chrome-text">MA</span><img src="assets/mostafa-amir.jpg" alt="Mostafa Amir" width="124" height="124" decoding="async" onerror="this.remove()"></div>
           <h1 class="hero-title">
@@ -202,8 +191,8 @@
             </div>
           </h1>
           <p class="hero-sub">
-            <span class="lang-en">I connect product thinking, business understanding, and technology to build real products, brands, and operational systems. From strategic positioning to launch: transforming ideas into high-performing digital systems.</span>
-            <span class="lang-ar" style="font-family:'Noto Sans Arabic'; font-size:15.5px; direction:rtl; text-align:center; line-height:1.75; display:block;">بربط التفكير بالمنتج، وفهم بيزنس العمل، والتكنولوجيا عشان أبني منتجات وعلامات تجارية وأنظمة تشغيلية حقيقية. من التموضع الاستراتيجي لحد الإطلاق: تحويل الأفكار لأنظمة رقمية عالية الأداء.</span>
+            <span class="lang-en">I turn business problems into real products. Brand identity, commerce infrastructure, and go-to-market — built as one system that actually ships.</span>
+            <span class="lang-ar" style="font-family:'Noto Sans Arabic'; font-size:15.5px; direction:rtl; text-align:center; line-height:1.75; display:block;">بحول مشاكل البيزنس لمنتجات حقيقية. هوية البراند، منصة التجارة، وخطة الإطلاق — كلها نظام واحد بيتنفذ فعلاً.</span>
           </p>
         </div>
 
@@ -236,7 +225,7 @@
               </div>
               <div class="bar"><i data-bar="70"></i></div>
               <div class="row">
-                <span class="k"><span class="lang-en">Active Systems</span><span class="lang-ar">أنظمة نشطة حالياً</span></span>
+                <span class="k"><span class="lang-en">Active Brands</span><span class="lang-ar">براندات نشطة حالياً</span></span>
                 <span class="v" data-count="12" data-suffix="">12</span>
               </div>
               <div class="bar"><i data-bar="60"></i></div>
@@ -290,7 +279,7 @@
       </button>
       <button class="mode" data-mode="3">
         <div class="n">04</div>
-        <div class="t"><span class="lang-en">AI WORKFLOWS</span><span class="lang-ar">تدفق الذكاء</span></div>
+        <div class="t"><span class="lang-en">Growth & Launch</span><span class="lang-ar">النمو والإطلاق</span></div>
       </button>
       <button class="mode" data-mode="4">
         <div class="n">05</div>
@@ -316,8 +305,8 @@
           <span class="lang-ar">شغل مختار</span>
         </span>
         <h2>
-          <span class="lang-en">Systems in the wild.</span>
-          <span class="lang-ar">أنظمة شغّالة فعلاً في السوق.</span>
+          <span class="lang-en">Real products.<br>Live businesses.</span>
+          <span class="lang-ar">منتجات حقيقية.<br>بيزنسات شغّالة فعلاً.</span>
         </h2>
       </div>
       <div class="work-nav" data-reveal>
@@ -335,7 +324,15 @@
   <!-- ===== ABOUT ===== -->
   <section class="about" id="about">
     <div class="about-photo" data-reveal>
+      <div class="ph-badge ph-badge-tl">
+        <span class="bv">15+</span>
+        <span class="bk">Products Live</span>
+      </div>
       <div class="ph-mono"><span>MA</span><img src="assets/mostafa-amir.jpg" alt="Mostafa Amir" width="160" height="160" loading="lazy" decoding="async" onerror="this.remove()"></div>
+      <div class="ph-badge ph-badge-br">
+        <span class="bv">6 yrs</span>
+        <span class="bk">Execution</span>
+      </div>
       <div class="ph-status"><i></i> ONLINE</div>
       <div class="ph-tag">
         <span class="lang-en">// founder · product builder</span>
@@ -344,7 +341,7 @@
     </div>
     <div class="glass about-body" data-reveal data-d="1">
       <span class="kicker">
-        <span class="lang-en">Introduce Myself</span>
+        <span class="lang-en">About</span>
         <span class="lang-ar">تعرف عليّا</span>
       </span>
       <div class="lang-ar">
@@ -352,14 +349,14 @@
         <p style="font-family:'Noto Sans Arabic'; direction:rtl; text-align:right; font-size:15px; line-height:1.8; color:var(--ink-2); margin-bottom:14px;">بشتغل من الأول للآخر — من أول قرار للتموضع لحد آخر خطوة تكامل وأتمتة — لأن المنتج بينجح بجد لما الهوية والتكنولوجيا والعمليات يشتغلوا سوا كنظام واحد متكامل.</p>
       </div>
       <div class="lang-en">
-        <p>I build the operational infrastructure and digital products behind brands that operate at scale. That means product strategy that aligns with business goals, e-commerce platforms engineered for conversion, and workflows that eliminate administrative friction.</p>
-        <p>I work end-to-end — from the first positioning decision to the last integration trigger — because a product only succeeds when its brand, tech, and operations function as one unified system.</p>
+        <p>I build the products and systems behind brands that grow. From brand identity and positioning, to the commerce platform, to the operations that keep it running — I own the full picture.</p>
+        <p>Most agencies hand you a website. I hand you a system. One that knows why it was built, who it's for, and how to scale.</p>
       </div>
       <div class="about-tags lang-en">
-        <span>Product Strategy</span><span>Commerce Infrastructure</span><span>Workflow Automation</span><span>API Integrations</span><span>Shopify Architecture</span><span>Business Positioning</span>
+        <span>Product Strategy</span><span>Brand Systems</span><span>Commerce Architecture</span><span>Workflow Automation</span><span>Go-to-Market</span><span>Business Positioning</span>
       </div>
       <div class="about-tags lang-ar">
-        <span>استراتيجية المنتج</span><span>بنية التجارة</span><span>أتمتة العمليات</span><span>ربط الأنظمة APIs</span><span>شوبيفاي</span><span>تموضع الأعمال</span>
+        <span>استراتيجية المنتج</span><span>أنظمة العلامة</span><span>بنية التجارة</span><span>أتمتة العمليات</span><span>الإطلاق للسوق</span><span>تموضع الأعمال</span>
       </div>
     </div>
   </section>
@@ -404,7 +401,7 @@
       <!-- Step 3 -->
       <div class="glass sys-card" data-reveal data-d="3">
         <div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="9" rx="1"/><rect x="14" y="3" width="7" height="5" rx="1"/><rect x="14" y="12" width="7" height="9" rx="1"/><rect x="3" y="16" width="7" height="5" rx="1"/><path d="M7 12v4M17 8v4"/></svg></div>
-        <div class="num">03 / ARCHITECTURE</div>
+        <div class="num">03 / SYSTEMS DESIGN</div>
         <h4>
           <span class="lang-en">Design the System</span>
           <span class="lang-ar">تصميم هيكل النظام</span>
@@ -456,27 +453,27 @@
         <span class="lang-ar">كلمني</span>
       </span>
       <h2 class="chrome-text">
-        <span class="lang-en">Let's build a product that scales.</span>
-        <span class="lang-ar">يلا نبني منتج يتوسع بجد.</span>
+        <span class="lang-en">Got a product to build? Let's talk.</span>
+        <span class="lang-ar">عندك منتج تبنيه؟ كلمني.</span>
       </h2>
       <p class="lang-en">If you're defining a new product, scaling a commerce brand, or seeking to automate complex business workflows — let's talk about the problem you want to solve, and how we can build a system to solve it.</p>
       <p class="lang-ar" style="font-family:'Noto Sans Arabic'; direction:rtl; text-align:center;">لو بتحدد ملامح منتج جديد، أو بتكبّر علامة تجارية، أو محتاج تأتمت تدفقات عمل معقدة — كلمني عن المشكلة اللي عايز تحلها، وإزاي نقدر نبني نظام يحلها بجد.</p>
 
       <div class="channels">
-        <a class="channel" href="mailto:mostafaamir692002@gmail.com">
+        <a class="channel" href="mailto:mostafaamir692002@gmail.com" target="_blank" rel="noopener">
           <svg width="17" height="17" viewBox="0 0 24 24" fill="none"><rect x="3" y="5" width="18" height="14" rx="2.5" stroke="currentColor" stroke-width="1.6"/><path d="m4 7 8 6 8-6" stroke="currentColor" stroke-width="1.6"/></svg>
           <span class="lang-en">Email</span>
           <span class="lang-ar">الإيميل</span>
         </a>
-        <a class="channel" href="#top">
+        <a class="channel" href="https://www.linkedin.com/in/mostafa-amir-767772346/" target="_blank" rel="noopener noreferrer">
           <svg width="17" height="17" viewBox="0 0 24 24" fill="none"><rect x="4" y="4" width="16" height="16" rx="3" stroke="currentColor" stroke-width="1.6"/><path d="M8 10v6M8 7.5v.01M12 16v-3a2 2 0 0 1 4 0v3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
           <span class="lang-en">LinkedIn</span>
           <span class="lang-ar">لينكد إن</span>
         </a>
-        <a class="channel" href="#work">
-          <svg width="17" height="17" viewBox="0 0 24 24" fill="none"><path d="M4 7h6M4 12h7M4 17h7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><circle cx="18" cy="14" r="3.2" stroke="currentColor" stroke-width="1.6"/></svg>
-          <span class="lang-en">Portfolio</span>
-          <span class="lang-ar">شغلي</span>
+        <a class="channel" href="https://wa.me/201118630150" target="_blank" rel="noopener noreferrer">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span class="lang-en">WhatsApp</span>
+          <span class="lang-ar">واتساب</span>
         </a>
       </div>
       <a class="contact-cta" href="mailto:mostafaamir692002@gmail.com">
@@ -513,7 +510,7 @@
   <nav class="mobile-menu-links">
     <a href="#work" class="mobile-nav-link"><span class="lang-en">Work</span><span class="lang-ar">أعمالي</span></a>
     <a href="#about" class="mobile-nav-link"><span class="lang-en">About</span><span class="lang-ar">عني</span></a>
-    <a href="#systems" class="mobile-nav-link"><span class="lang-en">Systems</span><span class="lang-ar">الأنظمة</span></a>
+    <a href="#systems" class="mobile-nav-link"><span class="lang-en">Approach</span><span class="lang-ar">المنهجية</span></a>
     <a href="#modes" class="mobile-nav-link"><span class="lang-en">Disciplines</span><span class="lang-ar">التخصصات</span></a>
   </nav>
   <div class="mobile-menu-cta">
@@ -525,7 +522,7 @@
 </div>
 
 <!-- SYSTEM CONSOLE LOG OVERLAY -->
-<div class="sys-log-console is-active" id="sysLogConsole">
+<div class="sys-log-console" id="sysLogConsole">
   <div class="sys-log-title">
     <span>SYSTEM TELEMETRY</span>
     <i></i>

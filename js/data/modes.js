@@ -30,11 +30,11 @@
       m: [["Workflow Design", 90], ["Fulfillment Logic", 92], ["Operational Audit", 86]]
     },
     {
-      t: "Integrations & Automation",
-      arT: "التكامل وأتمتة النظم",
-      d: "Connecting separate business tools, databases, and APIs. Building custom server scripts and automated message pipelines that eliminate administrative overhead.",
-      ar: "ربط أدوات العمل المنفصلة، وقواعد البيانات، والـ APIs ببعضها. بناء سكربتات خوادم مخصصة ومسارات رسائل تلقائية بتلغي المجهود الإداري اليدوي.",
-      m: [["API Integrations", 92], ["Task Automation", 95], ["Data Synchronization", 88]]
+      t: "Growth Strategy & Go-to-Market",
+      arT: "استراتيجية النمو والإطلاق للسوق",
+      d: "Designing the full launch plan — from pricing and channel selection to messaging and conversion funnels. Turning a ready product into real market traction.",
+      ar: "تصميم خطة الإطلاق الكاملة — من التسعير واختيار القنوات لحد رسائل التسويق ومسارات التحويل. تحويل المنتج الجاهز لحركة حقيقية في السوق.",
+      m: [["Launch Planning", 92], ["Channel Strategy", 89], ["Conversion Funnels", 94]]
     },
     {
       t: "Brand Systems & Identity",

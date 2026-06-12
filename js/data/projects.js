@@ -13,11 +13,19 @@
       id: "ROYAL SEA",
       glyph: "R",
       glyphClass: "wc-3",
-      tag: { en: "Premium Seafood E-Commerce", ar: "متجر مأكولات بحرية فاخرة" },
+      tag: { en: "Premium Seafood Commerce", ar: "متجر مأكولات بحرية فاخرة" },
       title: "Royal Sea",
       website: "https://royal-sea-eg.com",
-      status: { en: "Live Project", ar: "مشروع حي" },
-      previewImage: "assets/royal_sea_preview.jpg",
+      status: { en: "Live", ar: "مشروع حي" },
+      previewImage: "https://royal-sea-eg.com/cdn/shop/files/ChatGPT_Image_Jun_3_2026_09_47_12_PM.png?v=1780512456&width=1200",
+      problem_short: {
+        en: "How do you sell premium seafood online when standard storefronts feel cheap?",
+        ar: "إزاي تبيع مأكولات بحرية فاخرة وقوالب المتاجر التقليدية بتبان رخيصة؟"
+      },
+      outcome_short: {
+        en: "A bilingual commerce system — 38 SKUs, full AR/EN localization, zero friction checkout.",
+        ar: "نظام تجارة كامل بلغتين — ٣٨ منتج، تعريب شامل، وتجربة دفع بدون أي عقبات."
+      },
       card: {
         en: "Bilingual Shopify commerce system for a premium seafood brand — 38-product catalog engineered, translated, and QA'd end-to-end.",
         ar: "نظام تجارة إلكترونية كامل على شوبيفاي بلغتين لبراند مأكولات بحرية فاخر — كتالوج ٣٨ منتج اتبنى واتراجع من الأول للآخر."
@@ -25,6 +33,10 @@
       meta: {
         en: ["Brand Experience", "Commerce Architecture", "Catalog Design"],
         ar: ["تجربة العلامة", "بنية التجارة", "تصميم الكتالوج"]
+      },
+      focusTags: {
+        en: ["Brand Building", "Commerce System", "Product Catalog", "Bilingual UX", "Customer Journey"],
+        ar: ["بناء العلامة", "نظام التجارة", "كتالوج المنتجات", "تجربة ثنائية اللغة", "رحلة العميل"]
       },
       techs: {
         en: ["Shopify Engine", "Catalog Architecture", "Customer Journey", "Bilingual Localization"],
@@ -80,11 +92,19 @@
       id: "MEDIEVAL ALOUD",
       glyph: "M",
       glyphClass: "wc-1",
-      tag: { en: "Luxury Fragrance Commerce", ar: "منصة عطور فاخرة" },
+      tag: { en: "Luxury Fragrance Brand", ar: "دار عطور فاخرة" },
       title: "Medieval Aloud",
       website: "https://medieval-aloud.com",
-      status: { en: "Live Project", ar: "مشروع حي" },
-      previewImage: "assets/medieval_aloud_preview.jpg",
+      status: { en: "Live", ar: "مشروع حي" },
+      previewImage: "https://medieval-aloud.com/cdn/shop/files/ChatGPT_Image_May_24_2026_06_48_23_PM.png?v=1779637738&width=1200",
+      problem_short: {
+        en: "A luxury oud & musk brand with zero search visibility in the Gulf — and copy that sounded generic.",
+        ar: "دار عطور عود ومسك فاخرة بدون ظهور في محركات البحث الخليجية — ونصوص بتبان عادية."
+      },
+      outcome_short: {
+        en: "Full brand voice overhaul, Gulf-market SEO architecture, and a storefront that feels like a boutique.",
+        ar: "إعادة صياغة كاملة لنبرة البراند، بنية SEO خليجية، ومتجر يحس بنفسه محل عطور فاخر."
+      },
       card: {
         en: "Premium fragrance house (Oud & Musk) Shopify system with full Arabic localization, premium copy, and Gulf-market SEO architecture.",
         ar: "نظام تجارة لدار عطور عربية فاخرة (العود والمسك) على شوبيفاي بتعريب كامل، وصياغة راقية، وبنية SEO مظبوطة للسوق الخليجي."
@@ -92,6 +112,10 @@
       meta: {
         en: ["Luxury Positioning", "Brand Voice", "Search Architecture"],
         ar: ["تموضع الفخامة", "نبرة الصوت للبراند", "بنية البحث"]
+      },
+      focusTags: {
+        en: ["Brand Strategy", "Luxury Positioning", "Content Direction", "Gulf SEO", "Commerce Experience"],
+        ar: ["استراتيجية البراند", "تموضع الفخامة", "توجيه المحتوى", "SEO خليجي", "تجربة التجارة"]
       },
       techs: {
         en: ["Shopify Engine", "Premium Copywriting", "SEO Optimization", "Gulf Market Adaptability"],
@@ -147,11 +171,19 @@
       id: "SEAFOOD MOOD",
       glyph: "S",
       glyphClass: "wc-4",
-      tag: { en: "Seafood Commerce Platform", ar: "منصة تجارة المأكولات البحرية" },
+      tag: { en: "Seafood Commerce Platform", ar: "منصة تجارة مأكولات بحرية" },
       title: "Seafood Mood",
       website: "https://seafood-mood.com",
-      status: { en: "Live Project", ar: "مشروع حي" },
-      previewImage: "assets/fishmonger_preview.jpg",
+      status: { en: "Live", ar: "مشروع حي" },
+      previewImage: "https://www.seafood-mood.com/cdn/shop/files/5_9b25aaa5-430f-430c-a9e5-2630fd9e93a0.png?v=1774365601&width=1200",
+      problem_short: {
+        en: "Fresh seafood inventory changes daily — static carts cause order failures and delivery chaos.",
+        ar: "مخزون الأسماك الطازجة بيتغير يومياً — السلة التقليدية بتسبب فشل في الطلبات وفوضى في التوصيل."
+      },
+      outcome_short: {
+        en: "A dynamic commerce engine — live inventory sync, automated WhatsApp tracking, and 100% digital order flow.",
+        ar: "محرك تجارة ديناميكي — مزامنة مخزون حية، متابعة واتساب أوتوماتيكية، وعمليات طلبات ١٠٠% رقمية."
+      },
       card: {
         en: "Dynamic commerce platform for fresh catch ordering — inventory workflows, live pricing, and fulfillment logic connected end-to-end.",
         ar: "منصة تجارة ديناميكية لطلب الأسماك الطازجة — تدفقات المخزون، الأسعار الحية، ومنطق التوريد متصلين من الأول للآخر."
@@ -159,6 +191,10 @@
       meta: {
         en: ["Platform Design", "Operational Flow", "Inventory Systems"],
         ar: ["تصميم المنصة", "التدفق التشغيلي", "أنظمة المخزون"]
+      },
+      focusTags: {
+        en: ["Digital Commerce", "Inventory Operations", "Customer Experience", "Workflow Design", "Fulfillment Logic"],
+        ar: ["التجارة الرقمية", "عمليات المخزون", "تجربة العميل", "تصميم التدفقات", "منطق التوريد"]
       },
       techs: {
         en: ["Commerce Engine", "Dynamic Pricing Workflows", "Order Routing System", "UX Design"],
@@ -214,11 +250,19 @@
       id: "UNITED",
       glyph: "U",
       glyphClass: "wc-2",
-      tag: { en: "B2B Supply Chain & Operations", ar: "سلاسل التوريد والعمليات B2B" },
+      tag: { en: "B2B Fresh Produce Supplier", ar: "مورد حاصلات طازجة B2B" },
       title: "UNITED",
       website: "https://united-ffv.com",
-      status: { en: "Live Project", ar: "مشروع حي" },
-      previewImage: "assets/pantoufla_preview.jpg",
+      status: { en: "Live", ar: "مشروع حي" },
+      previewImage: "https://images.unsplash.com/photo-1610348725531-843dff563e2c?w=1200&q=80",
+      problem_short: {
+        en: "A B2B produce supplier running wholesale on WhatsApp and phone calls — invoice errors, expired stock, zero visibility.",
+        ar: "مورد جملة بيدير طلباته على الواتساب والتليفون — أخطاء فواتير، منتجات تالفة، وصفر رؤية."
+      },
+      outcome_short: {
+        en: "Digitized the full supply chain — contract pricing portal, auto-PDF invoicing, warehouse packing manifests.",
+        ar: "رقمنة كاملة لسلسلة التوريد — بوابة أسعار العقود، فواتير PDF أوتوماتيكية، وقوائم تعبئة المخازن."
+      },
       card: {
         en: "Comprehensive B2B commerce and operations system for a fresh produce supplier — automating ordering, invoicing, and supply chain logistics.",
         ar: "نظام عمليات وتجارة B2B متكامل لمورد حاصلات زراعية طازجة — أتمتة الطلبات، الفواتير، ولوجستيات سلاسل التوريد."
@@ -226,6 +270,10 @@
       meta: {
         en: ["B2B Infrastructure", "Supply Chain Systems", "Operational Automation"],
         ar: ["بنية تحتية B2B", "أنظمة سلاسل التوريد", "أتمتة العمليات"]
+      },
+      focusTags: {
+        en: ["B2B Commerce", "Supply Chain Design", "Workflow Automation", "Operations", "Digital Transformation"],
+        ar: ["التجارة B2B", "تصميم سلاسل التوريد", "أتمتة العمليات", "التشغيل", "التحول الرقمي"]
       },
       techs: {
         en: ["Operations Design", "Invoice Automation", "Logistics Routing", "Wholesale Portal UX"],
