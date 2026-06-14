@@ -39,6 +39,11 @@
   .monogram-disc span{font-size:38px}
   .hero-strips{padding:0 16px 18px;margin-top:12px}
 
+  /* Mobile hero: hide right rail (clock/stats) and control center panel —
+     keeps profile card for social links + availability, strips decorative weight */
+  .rail:last-child { display: none; }
+  .rail .glass:not(.profile-card) { display: none; }
+
   .modebar{flex-direction:column}
   .mode{min-width:0}
   .mode-readout{grid-template-columns:1fr;gap:18px;padding:20px}
@@ -139,4 +144,17 @@
   .theme-toggle{width:36px;height:36px}
   .work-dots i{width:10px;height:10px}
   .work-dots i.active{width:26px}
+}
+
+/* ---------- RTL: flip hero-manifesto accent border in Arabic mode ---------- */
+html[lang="ar"] .hero-manifesto {
+  border-left: none !important;
+  border-right: 2px solid rgba(90,169,255,.4) !important;
+  border-radius: 12px 0 0 12px !important;
+}
+
+/* ---------- light-mode dock nav active link ---------- */
+body.light-mode .dock-links a.active {
+  background: rgba(15,16,21,.06) !important;
+  color: var(--ink-0) !important;
 }

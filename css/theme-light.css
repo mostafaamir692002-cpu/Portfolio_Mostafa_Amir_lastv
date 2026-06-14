@@ -165,3 +165,196 @@ body.light-mode .sel-menu::after {
 }
 body.light-mode .mobile-nav-link { color: var(--ink-1) !important; }
 body.light-mode .mobile-nav-link:hover { color: var(--ink-0) !important; background: rgba(15,16,21,.04) !important; }
+
+/* ============================================================
+   LIGHT MODE — extended component overrides (comprehensive pass)
+   ============================================================ */
+
+/* Section heading gradient — near-white gradient is invisible on light bg */
+body.light-mode .sec-head h2 {
+  background: linear-gradient(128deg, #0f1015 0%, #1e2d4a 50%, #007aff 110%) !important;
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+  -webkit-text-fill-color: transparent;
+  color: transparent !important;
+}
+
+/* Footer banner — white sweep is invisible on light bg */
+body.light-mode .foot-banner {
+  background: linear-gradient(
+    110deg,
+    #0f1015 0%, #1d2b4a 15%, #007aff 35%,
+    #2c3548 50%, #5b3c8a 70%, #1d2b4a 85%, #0f1015 100%
+  ) !important;
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+  -webkit-text-fill-color: transparent;
+  color: transparent !important;
+}
+
+/* Footer meta + home indicator */
+body.light-mode .foot-meta {
+  color: var(--ink-3) !important;
+  border-top-color: var(--line) !important;
+}
+body.light-mode .home-ind i { background: rgba(15,16,21,.18) !important; }
+
+/* Work carousel cards */
+body.light-mode .work-card {
+  background: linear-gradient(180deg, rgba(255,255,255,.92), rgba(238,243,252,.82)) !important;
+  border-color: rgba(15,16,21,.07) !important;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.95), 0 12px 32px rgba(15,16,21,.06) !important;
+}
+body.light-mode .wc-body h3 { color: var(--ink-0) !important; }
+body.light-mode .wc-body p,
+body.light-mode .wc-case-text { color: var(--ink-2) !important; }
+body.light-mode .wc-outcome-text { color: var(--ink-1) !important; }
+body.light-mode .wc-meta span {
+  background: rgba(15,16,21,.04) !important;
+  border-color: rgba(15,16,21,.07) !important;
+  color: var(--ink-2) !important;
+}
+body.light-mode .wc-btn-secondary {
+  background: rgba(15,16,21,.04) !important;
+  border-color: rgba(15,16,21,.07) !important;
+  color: var(--ink-1) !important;
+}
+body.light-mode .wc-btn-secondary:hover {
+  background: rgba(15,16,21,.08) !important;
+  color: var(--ink-0) !important;
+}
+
+/* Work dots — white-alpha dots invisible on light bg */
+body.light-mode .work-dots i { background: rgba(15,16,21,.14) !important; }
+body.light-mode .work-dots i.active { background: var(--glow) !important; }
+
+/* Prev/next nav arrows */
+body.light-mode .navbtn {
+  background: linear-gradient(180deg, #f4f6fb, #e6ecf5) !important;
+  border-color: rgba(15,16,21,.09) !important;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.95), 0 6px 16px rgba(15,16,21,.05) !important;
+  color: var(--ink-0) !important;
+}
+body.light-mode .navbtn:hover {
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.95),
+    0 8px 20px rgba(15,16,21,.07),
+    0 0 16px -4px rgba(10,132,255,.2) !important;
+}
+
+/* Systems / Approach cards */
+body.light-mode .sys-card .ic {
+  background: rgba(10,132,255,.06) !important;
+  border-color: rgba(10,132,255,.12) !important;
+  color: var(--glow) !important;
+}
+body.light-mode .sys-card .num { color: var(--glow) !important; }
+body.light-mode .sys-card h4 { color: var(--ink-0) !important; }
+body.light-mode .sys-card p { color: var(--ink-2) !important; }
+body.light-mode .sys-card:hover { border-left-color: rgba(10,132,255,.4) !important; }
+
+/* Mode / Disciplines selector */
+body.light-mode .mode { color: var(--ink-2) !important; }
+body.light-mode .mode:hover {
+  background: rgba(15,16,21,.04) !important;
+  color: var(--ink-1) !important;
+}
+body.light-mode .mode.active {
+  background: linear-gradient(180deg, #e8eef8, #d8e1f0) !important;
+  color: var(--ink-0) !important;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.95), 0 6px 16px rgba(15,16,21,.07) !important;
+}
+body.light-mode .mode.active .n { color: var(--glow) !important; opacity: 1; }
+body.light-mode .mode.active::before {
+  background: linear-gradient(90deg, transparent, var(--glow), transparent) !important;
+}
+body.light-mode .mode-readout .desc h4 { color: var(--ink-0) !important; }
+body.light-mode .mode-readout .desc p { color: var(--ink-2) !important; }
+
+/* Meter + stat bar tracks — white-alpha tracks invisible on light bg */
+body.light-mode .meter .bar,
+body.light-mode .w-stat .bar { background: rgba(15,16,21,.07) !important; }
+
+/* About section */
+body.light-mode .about-body p { color: var(--ink-2) !important; }
+body.light-mode .about-origin { color: var(--ink-1) !important; }
+body.light-mode .about-market { color: var(--ink-3) !important; }
+body.light-mode .about-tags span {
+  background: rgba(15,16,21,.04) !important;
+  border-color: rgba(15,16,21,.07) !important;
+  color: var(--ink-1) !important;
+}
+
+/* Testimonials */
+body.light-mode .testimonial-card {
+  background: linear-gradient(180deg, rgba(255,255,255,.9), rgba(240,244,252,.8)) !important;
+  border-color: rgba(15,16,21,.06) !important;
+}
+body.light-mode .testimonial-card:hover {
+  border-color: rgba(10,132,255,.16) !important;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.95), 0 20px 48px rgba(15,16,21,.07), 0 0 24px -8px rgba(10,132,255,.12) !important;
+}
+body.light-mode .test-quote { color: var(--ink-1) !important; }
+body.light-mode .test-name { color: var(--ink-0) !important; }
+body.light-mode .test-role { color: var(--glow) !important; }
+body.light-mode .test-author { border-top-color: var(--line) !important; }
+body.light-mode .test-avatar {
+  background: linear-gradient(135deg, rgba(15,16,21,.06), rgba(15,16,21,.04)) !important;
+  border-color: rgba(15,16,21,.09) !important;
+  color: var(--glow) !important;
+}
+
+/* Brand strip */
+body.light-mode .brand-strip { border-color: var(--line) !important; }
+body.light-mode .bs-logos span { color: var(--ink-2) !important; }
+body.light-mode .bs-label { color: var(--ink-3) !important; border-right-color: var(--line) !important; }
+body.light-mode .bs-sep { color: var(--glow) !important; opacity: .5; }
+body.light-mode .brand-strip:hover .bs-logos span { color: var(--ink-1) !important; }
+
+/* Work micro-CTA */
+body.light-mode .work-cta-link { color: var(--ink-1) !important; }
+body.light-mode .work-cta-link:hover { color: var(--ink-0) !important; }
+body.light-mode .work-micro-cta .work-cta-link {
+  background: linear-gradient(90deg, rgba(10,132,255,.07), rgba(97,53,255,.04)) !important;
+}
+body.light-mode .work-micro-cta .work-cta-link:hover {
+  background: linear-gradient(90deg, rgba(10,132,255,.11), rgba(97,53,255,.07)) !important;
+}
+
+/* Scroll cue */
+body.light-mode .scroll-cue { color: var(--ink-3) !important; }
+
+/* Lang switcher */
+body.light-mode .lang-switcher {
+  background: rgba(15,16,21,.05) !important;
+  border-color: rgba(15,16,21,.08) !important;
+}
+body.light-mode .lang-switcher span { color: var(--ink-2) !important; }
+body.light-mode .lang-switcher span.active {
+  background: rgba(15,16,21,.07) !important;
+  color: var(--ink-0) !important;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.8), 0 2px 6px rgba(15,16,21,.08) !important;
+}
+
+/* Avatar ring border blends with background */
+body.light-mode .avatar .ring-dot { border-color: var(--void-2) !important; }
+
+/* Contact timeline */
+body.light-mode .contact-timeline { color: var(--glow) !important; opacity: .8; }
+
+/* Profile meta row text */
+body.light-mode .profile-meta .row { color: var(--ink-1) !important; }
+body.light-mode .profile-card h3 { color: var(--ink-0) !important; }
+body.light-mode .profile-card .role { color: var(--ink-2) !important; }
+
+/* W-stat widget */
+body.light-mode .w-clock .t { color: var(--ink-0) !important; }
+body.light-mode .w-clock .d { color: var(--ink-2) !important; }
+body.light-mode .w-clock .loc { color: var(--ink-1) !important; }
+body.light-mode .w-stat .row .k { color: var(--ink-2) !important; }
+body.light-mode .w-stat .row .v { color: var(--ink-0) !important; }
+body.light-mode .cc-title { color: var(--ink-3) !important; }
+
+/* kicker line */
+body.light-mode .kicker { color: var(--glow) !important; }
+body.light-mode .kicker::before { background: linear-gradient(90deg, var(--glow), transparent) !important; opacity: .7; }

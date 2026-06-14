@@ -22,7 +22,7 @@
       var outcomeAr = p.outcome_short ? p.outcome_short.ar : "";
 
       return '<article class="work-card" data-project="' + p.id + '">' +
-        '<div class="wc-vis" style="position:relative;overflow:hidden;height:200px;">' +
+        '<div class="wc-vis">' +
           '<img src="' + p.previewImage + '" alt="' + p.title + '" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0;opacity:0.75;transition:opacity .4s,transform .6s;">' +
           '<div style="position:absolute;inset:0;background:linear-gradient(to bottom,rgba(0,0,0,0.15) 0%,rgba(0,0,0,0.55) 100%);"></div>' +
           '<div style="position:absolute;top:12px;left:14px;right:14px;display:flex;justify-content:space-between;align-items:center;">' +

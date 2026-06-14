@@ -66,6 +66,37 @@
         });
       });
     }
+
+    /* ---- active nav link tracking (IntersectionObserver) ---- */
+    if (window.IntersectionObserver) {
+      var navLinks = MOS.$$(".dock-links a");
+      if (navLinks.length) {
+        var sectionIds = ["work", "about", "systems", "modes", "contact"];
+        var activeObserver = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (!entry.isIntersecting) return;
+            var id = "#" + entry.target.id;
+            navLinks.forEach(function (a) {
+              a.classList.toggle("active", a.getAttribute("href") === id);
+            });
+          });
+        }, { threshold: 0.22, rootMargin: "-70px 0px -38% 0px" });
+
+        sectionIds.forEach(function (id) {
+          var el = document.getElementById(id);
+          if (el) activeObserver.observe(el);
+        });
+
+        /* clear active when back at hero */
+        var heroObserver = new IntersectionObserver(function (entries) {
+          if (entries[0].isIntersecting) {
+            navLinks.forEach(function (a) { a.classList.remove("active"); });
+          }
+        }, { threshold: 0.4 });
+        var hero = document.getElementById("top");
+        if (hero) heroObserver.observe(hero);
+      }
+    }
   });
 
   /* ---- custom cursor (dot + aura) ---- */
